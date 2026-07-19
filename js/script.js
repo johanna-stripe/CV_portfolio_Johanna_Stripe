@@ -12,6 +12,7 @@ const cv = document.querySelector('.cv')
 const contact = document.querySelector('.contact')
 const sectionContact = document.querySelector('.section-contact')
 const buttonContact = document.querySelector('.button-me-contacter')
+const stage = document.querySelector('.stage')
 
 //PORTFOLIO
 const portfolio = document.querySelector('.portfolio')
@@ -164,7 +165,7 @@ cv.addEventListener('click', () => {
 })
 
 scrollToPoint(logoAndName, body);
-scrollToPoint(about, body);
+scrollToPoint(about, stage);
 scrollToPoint(competences, sectionCompetences);
 scrollToPoint(portfolio, sectionPortfolio);
 scrollToPoint(contact, sectionContact);
@@ -256,4 +257,5 @@ buttonAsideClose5.addEventListener('click', () => {
 document.addEventListener('click', function (event) {
     closeExternalClick(portfolio5, aside5, btnEnSavoirPlus5, event, portfolio1, portfolio2, portfolio3, portfolio4, portfolio6)
 })
+
 
