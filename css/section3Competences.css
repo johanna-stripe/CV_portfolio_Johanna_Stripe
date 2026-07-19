@@ -1,0 +1,271 @@
+
+/* ===============================================================*/
+/* ==================SECTION 3 : COMPETENCES =====================*/
+/* ===============================================================*/
+.section-competences img:not(.flag) {
+    border: #fa7676 2px solid;
+    border-radius: 50%;
+    padding: 12px;
+}
+
+.section-competences img:hover {
+    background-color: #fa7676;
+}
+
+.icon-light-white, .icon-light-salmon {
+    right: 0;
+}
+
+.icon-light-white2, .icon-light-salmon2 {
+    left: 0;
+}
+
+.icon-light-white:hover, .icon-light-white2:hover {
+    opacity: 1;
+}
+
+.icon-light-salmon:hover .icon-light-white,
+.icon-light-salmon2:hover .icon-light-white2 {
+    opacity: 1;
+
+}
+
+@media (max-width: 992px) {
+    .section-competences h2:first-of-type {
+        font-size: 60px !important;
+    }
+
+    .div-competences {
+        flex-direction: column;
+    }
+
+    .title-competences {
+        font-size: 52px !important;
+    }
+
+    .sous-titre {
+        font-size: 30px !important;
+    }
+
+    .section-competences h5 {
+        font-size: 42px;
+    }
+
+    .section-competences p {
+        font-size: 32px !important;
+
+    }
+
+    .div-competences img {
+        width: 60px;
+        height: 60px;
+        padding: 20px;
+    }
+
+
+    /* Conteneur principal : colonne au lieu de 2 colonnes côte à côte */
+    .section-competences .div-competences {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .section-competences .div-competences .flex.align-items-center.gap-20px.position-relative {
+        padding-top: 120px !important;
+    }
+
+    .list-competences-web {
+        margin-top: 50px;
+    }
+
+    .langues {
+        margin-top: 90px;
+    }
+
+    .langues div p {
+        width: 350px;
+    }
+
+
+    /* Les 2 blocs (gauche/droite) : centrer, annuler align-items-end/start */
+    .section-competences .div-competences > div {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .section-competences .div-competences > div > div:first-child {
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Chaque ligne icône + texte : colonne, icône au-dessus, espace réservé en haut */
+    .section-competences .div-competences .flex.align-items-center.gap-20px.position-relative {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        padding-top: 70px;
+    }
+
+    /* Icônes : restent superposées (absolute) mais centrées horizontalement en haut */
+    .section-competences .icon-light-salmon,
+    .section-competences .icon-light-salmon2,
+    .section-competences .icon-light-white,
+    .section-competences .icon-light-white2 {
+        left: 50%;
+        right: auto;
+        top: 0;
+        transform: translateX(-50%);
+    }
+
+    /* Marges devenues inutiles puisque le texte n'est plus décalé à côté de l'icône */
+    .section-competences .m-right-80px,
+    .section-competences .m-left-80px {
+        margin: 0;
+    }
+
+    .div-competences {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .section-competences div h4 {
+        font-size: 25px;
+        margin-top: 0;
+    }
+
+    .sous-titre {
+        font-size: 14px;
+    }
+
+    .section-competences div p {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .section-competences h2:first-of-type {
+        font-size: 42px !important;
+    }
+
+    .div-competences {
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .title-competences {
+        font-size: 36px !important;
+    }
+
+    .sous-titre {
+        font-size: 18px !important;
+    }
+
+    .section-competences h5 {
+        font-size: 28px;
+    }
+
+    .section-competences p {
+        font-size: 20px !important;
+    }
+
+    .div-competences img {
+        width: 35px;
+        height: 35px;
+        padding: 14px;
+    }
+
+    /* Conteneur principal : colonne au lieu de 2 colonnes côte à côte */
+    .section-competences .div-competences {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .section-competences .div-competences .flex.align-items-center.gap-20px.position-relative {
+        padding-top: 80px !important;
+    }
+
+    .list-competences-web {
+        margin-top: 35px;
+    }
+
+    .langues {
+        margin-top: 60px;
+    }
+
+    .langues div p {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* Les 2 blocs (gauche/droite) : centrer, annuler align-items-end/start */
+    .section-competences .div-competences > div {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .section-competences .div-competences > div > div:first-child {
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Chaque ligne icône + texte : colonne, icône au-dessus, espace réservé en haut */
+    .section-competences .div-competences .flex.align-items-center.gap-20px.position-relative {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+        padding-top: 55px;
+    }
+
+    /* Icônes : restent superposées (absolute) mais centrées horizontalement en haut */
+    .section-competences .icon-light-salmon,
+    .section-competences .icon-light-salmon2,
+    .section-competences .icon-light-white,
+    .section-competences .icon-light-white2 {
+        left: 50%;
+        right: auto;
+        top: 0;
+        transform: translateX(-50%);
+    }
+
+    /* Marges devenues inutiles puisque le texte n'est plus décalé à côté de l'icône */
+    .section-competences .m-right-80px,
+    .section-competences .m-left-80px {
+        margin: 0;
+    }
+
+    .section-competences div h4 {
+        font-size: 20px;
+        margin-top: 0;
+    }
+
+    .sous-titre {
+        font-size: 14px;
+    }
+
+    .section-competences div p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 426px) {
+    .section-competences h2:first-of-type {
+        font-size: 35px !important;
+    }
+
+    .section-competences h4{
+        font-size: 30px !important;
+    }
+
+    .section-competences div p {
+        font-size: 16px !important;
+    }
+
+}
+
+
+

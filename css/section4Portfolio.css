@@ -1,0 +1,795 @@
+/* ===============================================================*/
+/* ======================SECTION 4 : PORTFOLIO====================*/
+/* ===============================================================*/
+.div-portfolio {
+    transition: transform 0.5s ease, background-color 0.5s ease, border-bottom 0.5s ease;
+    flex: 0 0 30%;
+    max-width: 30%;
+    box-sizing: border-box;
+}
+
+.div-portfolio:hover {
+    background-color: rgba(255, 255, 255, 0.11);
+    transform: translateY(-10px);
+    border-bottom: #fa7676 1px solid;
+}
+
+.en-savoir-plus-clicked {
+    color: #fa7676;
+}
+
+.div-portfolio:hover .en-savoir-plus-1, .div-portfolio:hover .en-savoir-plus-2, .div-portfolio:hover .en-savoir-plus-3, .div-portfolio:hover .en-savoir-plus-4, .div-portfolio:hover .en-savoir-plus-5, .div-portfolio:hover .en-savoir-plus-6 {
+    color: #fa7676;
+}
+
+.div-portfolio-clicked {
+    background-color: rgba(255, 255, 255, 0.11);
+    border-bottom: #fa7676 1px solid;
+}
+
+.en-savoir-plus span {
+    transition: transform 0.5s ease;
+}
+
+.div-portfolio:hover .en-savoir-plus span {
+    transform: translateX(8px);
+}
+
+.aside-1, .aside-2, .aside-3, .aside-4, .aside-5, .aside-6 {
+    opacity: 0;
+    transform: translateX(40px);
+    pointer-events: none;
+    transition: transform 0.5s cubic-bezier(.4, 0, .2, 1), opacity 0.4s ease;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.06);
+    border: 0.5px solid rgba(250, 133, 120, 0.3);
+    border-radius: 16px;
+    padding: 32px;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    max-height: 85vh;
+}
+
+.aside-1.open, .aside-2.open, .aside-3.open, .aside-4.open, .aside-5.open, .aside-6.open {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+}
+
+.aside-1::before, .aside-2::before, .aside-3::before, .aside-4::before, .aside-5::before, .aside-6::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #fa8578, transparent);
+}
+
+.aside-close-1, .aside-close-2, .aside-close-3, .aside-close-4, .aside-close-5, .aside-close-6 {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.aside-close-1:hover, .aside-close-2:hover, .aside-close-3:hover, .aside-close-4:hover, .aside-close-5:hover, .aside-close-6:hover {
+    background: rgba(250, 133, 120, 0.2);
+    color: #fa8578;
+}
+
+.aside-divider {
+    border: none;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+    margin: 20px 0;
+}
+
+.screenshot-main {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.screenshot-small {
+    width: 50%;
+    border-radius: 8px;
+}
+
+.button-voir-site {
+    background: none;
+    border: 0.5px solid #fa8578;
+    color: #fa8578;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.button-voir-site:hover {
+    background: #fa8578;
+    color: white;
+}
+
+
+.key_info_projet {
+    background-color: #fa7676;
+    padding: 5px;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.div-portfolio-mother.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.scroll-x {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 10px;
+}
+
+.scroll-x img {
+    flex-shrink: 0;
+}
+
+.scroll-x::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll-x::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+@media (max-width: 1199px) {
+    .div-portfolio-mother {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-left: 10px;
+        margin-right: 10px
+    }
+
+    .aside-1, .aside-2, .aside-3, .aside-4, .aside-5, .aside-6 {
+        width: 90%;
+        top: 0px;
+    }
+
+    .section-competences .flex.flex-direction-row {
+        gap: 40px;
+    }
+
+    .div-portfolio {
+        transition: transform 0.5s ease, background-color 0.5s ease, border-bottom 0.5s ease;
+        flex: 0 0 40%;
+        max-width: 40%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .section-portfolio h2:first-of-type {
+        font-size: 60px !important;
+    }
+
+    .div-portfolio-mother {
+        margin-left: 12px;
+        margin-right: 12px;
+        gap: 30px;
+    }
+
+    .div-portfolio {
+        transition: transform 0.5s ease, background-color 0.5s ease, border-bottom 0.5s ease;
+        flex: 0 0 100% !important;
+        max-width: 70% !important;
+        box-sizing: border-box;
+        padding: 25px !important;
+    }
+
+    .div-portfolio div {
+        max-width: 550px;
+    }
+
+    .div-portfolio img {
+        width: 100%;
+        height: auto;
+        max-width: 550px;
+    }
+
+    /* Le conteneur de texte prend la même largeur que l'image, centré, texte aligné à gauche */
+    .div-portfolio > div {
+        width: 100%;
+        max-width: 550px;
+        margin: 0 auto;
+        text-align: left !important;
+    }
+
+    .div-portfolio h4, .aside-header h4 {
+        font-size: 30px !important;
+        text-align: left !important;
+    }
+
+    .div-portfolio p {
+        font-size: 30px !important;
+        text-align: justify !important;
+        width: 100%;
+        max-width: 550px;
+    }
+
+    .aside-1, .aside-2, .aside-3, .aside-4, .aside-5, .aside-6 {
+        padding: 25px 22px 40px;
+    }
+
+    .aside-close-1, .aside-close-2, .aside-close-3,
+    .aside-close-4, .aside-close-5, .aside-close-6 {
+        top: 14px;
+        right: 14px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .aside-1, .aside-2, .aside-3, .aside-4, .aside-5, .aside-6 {
+        width: 98%;
+        padding: 35px 28px 55px;
+    }
+
+    /* Titres des aside */
+    .aside-header h4 {
+        font-size: 42px !important;
+        line-height: 1.3;
+    }
+
+    .aside-header a,
+    .aside-header p {
+        font-size: 24px !important;
+    }
+
+    .aside-left h5,
+    .aside-screenshots h5 {
+        font-size: 30px !important;
+    }
+
+    /* Ciblage direct et fort de TOUS les <p> dans chaque aside, peu importe leurs classes de taille */
+    .aside-1 p,
+    .aside-2 p,
+    .aside-3 p,
+    .aside-4 p,
+    .aside-5 p,
+    .aside-6 p {
+        font-size: 24px !important;
+        line-height: 1.6 !important;
+    }
+
+    .a-propos-du-projet {
+        flex-direction: column !important;
+    }
+
+    /* Tags */
+    .key_info_projet {
+        font-size: 20px !important;
+        padding: 14px 20px !important;
+    }
+
+    /* Bouton "Voir le site" */
+    .button-voir-site {
+        font-size: 20px !important;
+        padding: 18px 34px !important;
+        margin-bottom: 30px;
+    }
+
+    /* Bouton fermeture */
+    .aside-close-1, .aside-close-2, .aside-close-3,
+    .aside-close-4, .aside-close-5, .aside-close-6 {
+        width: 55px;
+        height: 55px;
+        font-size: 26px;
+    }
+
+    .screenshot-main,
+    .screenshot-small {
+        border-radius: 14px;
+    }
+
+    .aside-3 img,
+    .aside-4 img,
+    .aside-5 img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .aside-divider {
+        margin: 30px 0;
+    }
+
+    .tags.flex.gap-10px {
+        gap: 15px;
+    }
+
+    .tags.flex.gap-10px {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    /* VPE */
+    .key_info_projet {
+        font-size: 15px;
+        padding: 8px 10px;
+        align-self: flex-start
+    }
+
+    .signatures-mail img {
+        align-self: flex-start
+    }
+
+    .div-flyer-rs {
+        flex-direction: column !important;
+    }
+
+    .div-rs {
+        flex-direction: column;
+    }
+
+    .div-res-img {
+        flex-direction: row;
+    }
+
+    /* VVC */
+    .vvc-img {
+        height: 525px;
+        width: 372px;
+    }
+
+    .portfolio-6 {
+        display: none;
+    }
+
+    .div-portfolio {
+        transition: transform 0.5s ease, background-color 0.5s ease, border-bottom 0.5s ease;
+        flex: 0 0 40%;
+        max-width: 40%;
+        box-sizing: border-box;
+    }
+
+    .div-portfolio-mother {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-left: 10px;
+        margin-right: 10px
+    }
+
+    .aside-1, .aside-2, .aside-3, .aside-4, .aside-5, .aside-6 {
+        width: 90%;
+
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    /* --- Structure générale --- */
+    .div-portfolio {
+        transition: transform 0.5s ease, background-color 0.5s ease, border-bottom 0.5s ease;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .div-portfolio-mother {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .section-portfolio h2.font-size-40px {
+        font-size: 26px;
+    }
+
+    /* --- Aside : structure reprise du 992px, réduite --- */
+    .aside-1, .aside-2, .aside-3, .aside-4, .aside-5, .aside-6 {
+        width: 90%;
+        padding: 28px 22px 44px;
+    }
+
+    .aside-close-1, .aside-close-2, .aside-close-3,
+    .aside-close-4, .aside-close-5, .aside-close-6 {
+        top: 12px;
+        right: 12px;
+        width: 44px;
+        height: 44px;
+        font-size: 20px;
+    }
+
+    .aside-header h4 {
+        font-size: 34px !important;
+        line-height: 1.3;
+    }
+
+    .aside-header a,
+    .aside-header p {
+        font-size: 20px !important;
+    }
+
+    .aside-left h5,
+    .aside-screenshots h5 {
+        font-size: 24px !important;
+    }
+
+    .aside-1 p, .aside-2 p, .aside-3 p,
+    .aside-4 p, .aside-5 p, .aside-6 p {
+        font-size: 20px !important;
+        line-height: 1.5 !important;
+    }
+
+    .a-propos-du-projet {
+        flex-direction: column !important;
+    }
+
+    .key_info_projet {
+        font-size: 16px !important;
+        padding: 11px 16px !important;
+        align-self: flex-start;
+    }
+
+    .button-voir-site {
+        font-size: 16px !important;
+        padding: 14px 26px !important;
+        margin-bottom: 24px;
+    }
+
+    .screenshot-main,
+    .screenshot-small {
+        border-radius: 12px;
+    }
+
+    .aside-divider {
+        margin: 24px 0;
+    }
+
+    .tags.flex.gap-10px {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    /* --- Layout des blocs (aside 3 et 4) --- */
+    .div-flyer-rs {
+        flex-direction: column !important;
+    }
+
+    .div-rs {
+        flex-direction: column;
+    }
+
+    .div-res-img {
+        flex-direction: column !important;
+    }
+
+    .signatures-mail img {
+        align-self: flex-start;
+        width: 100% !important;
+        height: auto;
+        max-width: 350px;
+    }
+
+    /* --- Images génériques : aside 1, 2, 3, 4, 6 (aside-5 est géré à part) --- */
+    .aside-1 img, .aside-2 img, .aside-3 img,
+    .aside-4 img, .aside-6 img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .aside-1 .flex, .aside-2 .flex, .aside-3 .flex,
+    .aside-4 .flex, .aside-6 .flex {
+        flex-wrap: wrap;
+        min-width: 0;
+    }
+
+    /* Screenshots par 2 (aside 1, 2, 6) */
+    .screenshot-small {
+        width: calc(50% - 5px) !important;
+        flex: 0 1 calc(50% - 5px);
+    }
+
+    /* Flyer aside 3 : 2 images côte à côte */
+    .div-flyer-rs .flex.gap-5px img {
+        width: calc(50% - 5px) !important;
+        flex: 0 1 calc(50% - 5px);
+    }
+
+    .div-flyer-rs > div:first-child > img[src*="Invitation"] {
+        width: 100% !important;
+    }
+
+    /* Visuels réseaux sociaux aside 3 : empilés, pas trop larges */
+    .div-res-img img {
+        width: 60% !important;
+        align-self: center;
+    }
+
+    /* VVC aside 4 : 2 images côte à côte, réduites */
+    .aside-4 .vvc-img {
+        width: calc(50% - 10px) !important;
+        height: auto !important;
+        max-width: 220px;
+    }
+
+    /* --- Aside 5 : tous les groupes d'images en scroll horizontal --- */
+    .aside-5 .flex:not(.tags):not(.aside-header .tags):not(.flex-direction-column) {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: hidden;
+        gap: 10px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .aside-5 .flex:not(.tags):not(.aside-header .tags):not(.flex-direction-column) img {
+        flex-shrink: 0 !important;
+        width: auto !important;
+        height: 160px !important;
+        max-width: none !important;
+    }
+
+    .aside-5 .flex.gap-20px.m-top-20px img {
+        height: 200px !important;
+    }
+
+    .aside-5 .flex:not(.tags):not(.aside-header .tags)::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .aside-5 .flex:not(.tags):not(.aside-header .tags)::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 4px;
+    }
+
+    .aside-5 .flex:not(.tags):not(.aside-header .tags):not(.flex-direction-column)::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .aside-5 .flex:not(.tags):not(.aside-header .tags):not(.flex-direction-column)::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 4px;
+    }
+}
+
+@media (max-width: 426px) {
+
+    .aside-1, .aside-2, .aside-3, .aside-4, .aside-5, .aside-6 {
+        margin: 0;
+    }
+
+    .aside-header h4 {
+        font-size: 28px !important;
+    }
+
+    .section-portfolio h2:first-of-type {
+        font-size: 42px !important;
+    }
+
+    .div-portfolio h4 {
+        font-size: 22px !important;
+    }
+
+    .div-portfolio p {
+        font-size: 18px !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .div-portfolio h4 {
+        font-size: 20px !important;
+    }
+
+    .div-portfolio p {
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 325px) {
+
+    .div-portfolio h4 {
+        font-size: 18px !important;
+    }
+
+    .div-portfolio p {
+        font-size: 14px !important;
+    }
+
+    /* --- Structure générale --- */
+    .div-portfolio {
+        transition: transform 0.5s ease, background-color 0.5s ease, border-bottom 0.5s ease;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .div-portfolio-mother {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    .section-portfolio h2.font-size-40px {
+        font-size: 18px;
+    }
+
+    /* --- Aside : structure reprise du 767px, réduite --- */
+    .aside-1, .aside-2, .aside-3, .aside-4, .aside-5, .aside-6 {
+        width: 94%;
+        padding: 18px 5px 28px 5px;
+        margin-left: 10px;
+    }
+
+    .aside-close-1, .aside-close-2, .aside-close-3,
+    .aside-close-4, .aside-close-5, .aside-close-6 {
+        top: 8px;
+        right: 8px;
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .aside-header h4 {
+        font-size: 22px !important;
+        line-height: 1.25;
+    }
+
+    .aside-header a,
+    .aside-header p {
+        font-size: 14px !important;
+    }
+
+    .aside-left h5,
+    .aside-screenshots h5 {
+        font-size: 16px !important;
+    }
+
+    .aside-1 p, .aside-2 p, .aside-3 p,
+    .aside-4 p, .aside-5 p, .aside-6 p {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+    }
+
+    .a-propos-du-projet {
+        flex-direction: column !important;
+    }
+
+    .key_info_projet {
+        font-size: 11px !important;
+        padding: 7px 10px !important;
+        align-self: flex-start;
+    }
+
+    .button-voir-site {
+        font-size: 11px !important;
+        padding: 9px 18px !important;
+        margin-bottom: 16px;
+    }
+
+    .screenshot-main,
+    .screenshot-small {
+        border-radius: 8px;
+    }
+
+    .aside-divider {
+        margin: 16px 0;
+    }
+
+    .tags.flex.gap-10px {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    /* --- Layout des blocs (aside 3 et 4) --- */
+    .div-flyer-rs {
+        flex-direction: column !important;
+    }
+
+    .div-rs {
+        flex-direction: column;
+    }
+
+    .div-res-img {
+        flex-direction: column !important;
+    }
+
+    .signatures-mail img {
+        align-self: flex-start;
+        width: 100% !important;
+        height: auto;
+        max-width: 240px;
+    }
+
+    /* --- Images génériques : aside 1, 2, 3, 4, 6 (aside-5 est géré à part) --- */
+    .aside-1 img, .aside-2 img, .aside-3 img,
+    .aside-4 img, .aside-6 img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .aside-1 .flex, .aside-2 .flex, .aside-3 .flex,
+    .aside-4 .flex, .aside-6 .flex {
+        flex-wrap: wrap;
+        min-width: 0;
+    }
+
+    /* Screenshots par 2 (aside 1, 2, 6) */
+    .screenshot-small {
+        width: calc(50% - 4px) !important;
+        flex: 0 1 calc(50% - 4px);
+    }
+
+    /* Flyer aside 3 : 2 images côte à côte */
+    .div-flyer-rs .flex.gap-5px img {
+        width: calc(50% - 4px) !important;
+        flex: 0 1 calc(50% - 4px);
+    }
+
+    .div-flyer-rs > div:first-child > img[src*="Invitation"] {
+        width: 100% !important;
+    }
+
+    /* Visuels réseaux sociaux aside 3 : empilés, pas trop larges */
+    .div-res-img img {
+        width: 70% !important;
+        align-self: center;
+    }
+
+    /* VVC aside 4 : 2 images côte à côte, réduites */
+    .aside-4 .vvc-img {
+        width: calc(50% - 8px) !important;
+        height: auto !important;
+        max-width: 150px;
+    }
+
+    /* --- Aside 5 : tous les groupes d'images en scroll horizontal --- */
+    .aside-5 .flex:not(.tags):not(.aside-header .tags):not(.flex-direction-column) {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: hidden;
+        gap: 8px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .aside-5 .flex:not(.tags):not(.aside-header .tags):not(.flex-direction-column) img {
+        flex-shrink: 0 !important;
+        width: auto !important;
+        height: 110px !important;
+        max-width: none !important;
+    }
+
+    .aside-5 .flex.gap-20px.m-top-20px img {
+        height: 140px !important;
+    }
+
+    .aside-5 .flex:not(.tags):not(.aside-header .tags):not(.flex-direction-column)::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .aside-5 .flex:not(.tags):not(.aside-header .tags):not(.flex-direction-column)::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 4px;
+    }
+}
+
+

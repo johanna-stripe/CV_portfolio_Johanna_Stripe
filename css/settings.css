@@ -1,0 +1,301 @@
+/***************************************************************/
+/*********************** GENERAL SETTINGS **********************/
+/***************************************************************/
+
+/* ==========================================
+   1. FONT / TEXT
+   ========================================== */
+
+.font-f {
+    font-family: Arial, sans-serif;
+}
+
+/* Transform */
+.lowercase { text-transform: lowercase; }
+.uppercase { text-transform: uppercase; }
+.capitalize { text-transform: capitalize; }
+
+/* Weight & Style */
+.font-light { font-weight: lighter; }
+.font-bold { font-weight: bold; }
+.font-italique { font-style: italic; }
+
+/* Alignment & Decoration */
+.text-align-left { text-align: left; }
+.text-align-center { text-align: center; }
+.text-align-right { text-align: right; }
+.text-align-justify { text-align: justify; }
+.text-decoration-none { text-decoration: none; }
+.line-height-30px { line-height: 30px; }
+
+/* Font Sizes (Ordered) */
+.font-size-12px { font-size: 12px; }
+.font-size-13px { font-size: 13px; }
+.font-size-15px { font-size: 15px; }
+.font-size-18px { font-size: 18px; }
+.font-size-20px { font-size: 20px; }
+.font-size-22px { font-size: 22px; }
+.font-size-25px { font-size: 25px; }
+.font-size-30px { font-size: 30px; }
+.font-size-35px { font-size: 35px; }
+.font-size-40px { font-size: 40px; }
+.font-size-42px { font-size: 42px; }
+.font-size-50px { font-size: 50px; }
+.font-size-60px { font-size: 60px; }
+.font-size-70px { font-size: 70px; }
+
+
+/* ==========================================
+   2. COLORS & BACKGROUNDS
+   ========================================== */
+
+/* Text Colors */
+.c-white { color: white; }
+.c-black { color: #1a1a1a; }
+.c-navy { color: #003049; }
+.c-navy0f172a { color: #0f172a; }
+.c-blue2A9D8F { color: #2A9D8F; }
+.c-yellowE9C46A { color: #E9C46A; }
+.c-salmonfa8578 { color: #fa8578; }
+.c-redC1121F { color: #C1121F; }
+.c-red780000 { color: #780000; }
+
+/* Background Colors */
+.b-none { background: none; }
+.b-white { background-color: rgb(255, 255, 255); }
+.b-black { background-color: rgb(0, 0, 0); }
+.b-grey { background-color: #2b2b2b; }
+.b-navy { background-color: #003049; }
+.b-navy0f172a { background-color: #0f172a; }
+.b-blue2A9D8F { background-color: #2A9D8F; }
+.b-yellowE9C46A { background-color: #E9C46A; }
+.b-salmonfa8578 { background-color: #fa8578; }
+.b-red { background-color: red; }
+.b-red780000 { background-color: #780000; }
+
+
+/* ==========================================
+   3. BORDERS & LISTS
+   ========================================== */
+
+.border-none { border: none; }
+.border-red-1px { border: red 1px solid; }
+.border-navy-1px { border: #003049 1px solid; }
+.border-salmon-1px { border: #fa8578 1px solid; }
+.border-bottom { border-bottom: #402b2149 1px solid; }
+
+/* Border Radius */
+.border-radius-5px { border-radius: 5px; }
+.border-radius-10px { border-radius: 10px; }
+.border-radius-50 { border-radius: 50%; }
+.border-top-left-radius-5px { border-top-left-radius: 5px; }
+.border-bottom-left-radius-5px { border-bottom-left-radius: 5px; }
+
+/* Lists */
+.list-none { list-style: none; }
+
+
+/* ==========================================
+   4. DIMENSIONS (WIDTH / HEIGHT / GAP)
+   ========================================== */
+
+/* Width (Percentages) */
+.w-10 { width: 10%; }
+.w-25 { width: 25%; }
+.w-50 { width: 50%; }
+.w-60 { width: 60%; }
+.w-70 { width: 70%; }
+.w-100 { width: 100%; }
+
+/* Width (Pixels) */
+.w-60px { width: 60px; }
+.w-150px { width: 150px; }
+.w-200px { width: 200px; }
+.w-250px { width: 250px; }
+.w-300px { width: 300px; }
+.w-350px { width: 350px; }
+.max-w-350px { max-width: 350px; }
+.w-400px { width: 400px; }
+.w-500px { width: 500px; }
+.w-600px { width: 600px; }
+.w-700px { width: 700px; }
+.w-900px { width: 900px; }
+
+/* Height */
+.h-50 { height: 50%; }
+.h-100 { height: 100%; }
+.h-30px { height: 30px; }
+.h-50px { height: 50px; }
+.h-60px { height: 60px; }
+.h-75px { height: 75px; }
+.h-100px { height: 100px; }
+.h-120px { height: 120px; }
+.h-150px { height: 150px; }
+.h-200px { height: 200px; }
+.h-250px { height: 250px; }
+.h-300px { height: 300px; }
+.h-400px { height: 400px; }
+.h-450px { height: 450px; }
+.h-500px { height: 500px; }
+.h-550px { height: 550px; }
+.h-600px { height: 600px; }
+.h-700px { height: 700px; }
+.h-750px { height: 750px; }
+.h-850px { height: 850px; }
+
+/* Gap */
+.gap-5px { gap: 5px; }
+.gap-10px { gap: 10px; }
+.gap-20px { gap: 20px; }
+.gap-40px { gap: 40px; }
+.gap-50px { gap: 50px; }
+.gap-80px { gap: 80px; }
+
+
+/* ==========================================
+   5. MARGINS & PADDINGS
+   ========================================== */
+
+/* Margins Globals & Auto */
+.m-0 { margin: 0; }
+.m-5px { margin: 5px; }
+.m-10px { margin: 10px; }
+.m-20px { margin: 0 20px; }
+.m-40px { margin: 0 40px; }
+.m-left-auto { margin-left: auto; }
+.m-right-auto { margin-right: auto; }
+.m-top-auto { margin-top: auto; }
+.m-bottom-auto { margin-bottom: auto; }
+
+/* Margin Left */
+.m-left-10px { margin-left: 10px; }
+.m-left-20px { margin-left: 20px; }
+.m-left-40px { margin-left: 40px; }
+.m-left-80px { margin-left: 80px; }
+.m-left-120px { margin-left: 120px; }
+.m-left-200px { margin-left: 200px; }
+.m-left-490px { margin-left: 490px; }
+
+/* Margin Right */
+.m-right-10px { margin-right: 10px; }
+.m-right-20px { margin-right: 20px; }
+.m-right-40px { margin-right: 40px; }
+.m-right-80px { margin-right: 80px; }
+.m-right-490px { margin-right: 490px; }
+
+/* Margin Top */
+.m-top-10px { margin-top: 10px; }
+.m-top-20px { margin-top: 20px; }
+.m-top-40px { margin-top: 40px; }
+.m-top-50px { margin-top: 50px; }
+.m-top-60px { margin-top: 60px; }
+.m-top-100px { margin-top: 100px; }
+.m-top-300px { margin-top: 300px; }
+.m-top-561px { margin-top: 561px; }
+.m-top-700px { margin-top: 700px; }
+.m-top-900px { margin-top: 900px; }
+.m-top-1100px { margin-top: 1100px; }
+.m-top-1800px { margin-top: 1800px; }
+.m-top-3600px { margin-top: 3600px; }
+
+/* Margin Bottom */
+.m-bottom-10px { margin-bottom: 10px; }
+.m-bottom-20px { margin-bottom: 20px; }
+.m-bottom-30px { margin-bottom: 30px; }
+.m-bottom-40px { margin-bottom: 40px; }
+.m-bottom-50px { margin-bottom: 50px; }
+.m-bottom-60px { margin-bottom: 60px; }
+
+/* Padding Globals & Directional */
+.p-0 { padding: 0; }
+.p-10px { padding: 10px; }
+.p-12px { padding: 12px; }
+.p-15px { padding: 15px; }
+.p-20px { padding: 20px; }
+.p-25px { padding: 25px; }
+.p-30px { padding: 30px; }
+.p-40px { padding: 40px; }
+.p-left-20px { padding-left: 20px; }
+.p-right-30px { padding-right: 30px; }
+.p-top-30px { padding-top: 30px; }
+.p-top-50px { padding-top: 50px; }
+
+/* Padding Left/Right Spacing */
+.p-left-right-20px { padding: 0 20px; }
+.p-left-right-30px { padding: 0 30px; }
+.p-left-right-100px { padding: 0 100px; }
+.p-left-right-150px { padding: 0 150px; }
+.p-left-right-300px { padding: 0 300px; }
+
+
+/* ==========================================
+   6. DISPLAY, FLEXBOX & POSITION
+   ========================================== */
+
+/* Display types */
+.display-none { display: none; }
+.block { display: block; }
+.inline { display: inline; }
+.inline-block { display: inline-block; }
+.visibility-hidden { visibility: hidden; }
+
+/* Flexbox Core */
+.flex { display: flex; }
+.flex-1 { flex: 1; }
+.flex-direction-row { flex-direction: row; }
+.flex-direction-column { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+
+/* Justify Content */
+.justify-content-left { justify-content: left; }
+.justify-content-center { justify-content: center; }
+.justify-content-right { justify-content: right; }
+.justify-content-space-between { justify-content: space-between; }
+.justify-content-space-around { justify-content: space-around; }
+.justify-content-space-evenly { justify-content: space-evenly; }
+
+/* Align Items & Self */
+.align-items-start { align-items: start; }
+.align-items-flex-start { align-items: flex-start; }
+.align-items-center { align-items: center; }
+.align-items-end { align-items: end; }
+.align-items-stretch { align-items: stretch; }
+.align-content-center { align-content: center; }
+.align-self-center { align-self: center; }
+.align-self-flex-start { align-self: flex-start; }
+
+/* Positions & Offsets */
+.position-static { position: static; }
+.position-relative { position: relative; }
+.position-absolute { position: absolute; }
+.position-fixed { position: fixed; }
+.position-sticky { position: sticky; }
+.top-0 { top: 0; }
+.right-0 { right: 0; }
+.bottom-0 { bottom: 0; }
+.left-0 { left: 0; }
+
+/* Layering */
+.z-index-1 { z-index: 1; }
+.z-index-2 { z-index: 2; }
+
+
+/* ==========================================
+   7. UTILITIES (CURSOR, OPACITY, TRANSFORMS)
+   ========================================== */
+
+.cursor-pointer { cursor: pointer; }
+.opacity-0 { opacity: 0; }
+
+/* Animations & Transforms */
+.animation-div { transition: transform 0.4s ease; }
+.transformX-left { transform: translateX(calc(-100% - 50px)); }
+.transformX-left2 { transform: translateX(-120%); }
+.transformX-left3 { transform: translateX(-220%); }
+.transformX-right { transform: translateX(130%); }
+.transformX-right2 { transform: translateX(300%); }
+.push-left-one-col { transform: translateX(calc(-100% - 20px)); }
+
+/***************************************************************/
+/******************** END - GENERAL SETTINGS *******************/
+/***************************************************************/

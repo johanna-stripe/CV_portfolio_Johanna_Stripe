@@ -1,0 +1,95 @@
+
+/* ===============================================================*/
+/* ======================SECTION 5 : CONTACTS=====================*/
+/* ===============================================================*/
+.phone:hover, .e-mail:hover, .adresse:hover, .linkedin:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.phone p:nth-of-type(2):hover, .e-mail p:nth-of-type(2) a:hover, .linkedin p:nth-of-type(2) a:hover {
+    color: #fa8578;
+}
+
+@media (max-width: 992px) {
+
+    .div-contact {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px
+    }
+
+    .div-contact p, .div-contact p a {
+        font-size: 35px !important;
+        margin: 0;
+    }
+
+    .section-contact h2:first-of-type {
+        font-size: 70px;
+    }
+
+
+    .section-contact div img {
+        height: 70px;
+        width: 70px;
+    }
+
+    .phone, .e-mail, .linkedin, .adresse {
+        height: 250px;
+        width: fit-content;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-contact h2.font-size-40px {
+        font-size: 26px;
+    }
+
+    .phone, .e-mail, .linkedin, .adresse {
+        width: 80%;
+        height: 150px;
+    }
+
+    .section-contact {
+        padding: 0 12px;
+    }
+
+    .section-contact h2.font-size-40px {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 426px) {
+    .section-contact h2:first-of-type  {
+        font-size: 42px !important;
+    }
+
+    .div-contact p, .div-contact p a{
+        font-size: 25px !important;
+    }
+
+    .div-contact {
+        gap: 20px;
+    }
+
+    .phone, .e-mail, .linkedin, .adresse {
+        width: 80%;
+        height: 150px;
+    }
+
+    .section-contact {
+        padding: 0 12px;
+    }
+}
+
+
+@media (max-width: 325px) {
+    .div-contact p, .div-contact p a{
+        font-size: 20px !important;
+    }
+    .div-contact img{
+        height: 45px !important;
+        width: 45px !important;
+    }
+}
+

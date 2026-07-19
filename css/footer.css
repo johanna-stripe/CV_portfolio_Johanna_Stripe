@@ -1,0 +1,103 @@
+
+/* ===============================================================*/
+/* ==========================FOOTER================================*/
+/* ===============================================================*/
+
+footer {
+    position: relative;
+    margin-top: 50px;
+    padding: 30px 20px 30px;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 1) 40%);
+    overflow: hidden;
+}
+
+/* Fondu / dégradé décoratif au-dessus du footer, avec une touche de couleur */
+footer::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 160px;
+    pointer-events: none;
+}
+
+/* Petite ligne décorative comme sur le reste du site */
+footer .deco-footer {
+    color: #fa8578;
+    font-size: 18px;
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+footer p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+
+/* Liens éventuels (mentions légales etc.) */
+footer a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fa8578;
+}
+
+footer .footer-links {
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+@media (max-width: 992px) {
+    footer {
+        padding: 50px 20px 25px;
+    }
+
+    footer p {
+        font-size: 24px;
+    }
+
+    footer .footer-links {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    footer {
+        padding: 50px 20px 25px;
+    }
+
+    footer p {
+        font-size: 18px;
+    }
+
+    footer .footer-links {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 375px) {
+    footer {
+        padding: 50px 20px 25px;
+    }
+
+    footer p {
+        font-size: 15px;
+    }
+
+    footer .footer-links {
+        font-size: 13px;
+    }
+}
+

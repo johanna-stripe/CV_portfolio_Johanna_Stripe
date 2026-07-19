@@ -1,0 +1,312 @@
+/* ===============================================================*/
+/* ======================SECTION 1 : HOME=========================*/
+/* ===============================================================*/
+.introduction {
+    max-width: 700px;
+}
+
+.button-me-contacter {
+    transition: transform 0.5s ease;
+}
+
+.button-me-contacter:hover {
+    transform: scale(1.05)
+}
+
+.button-me-contacter span {
+    transition: transform 0.5s ease;
+}
+
+.button-me-contacter:hover span {
+    transform: translateX(5px);
+}
+
+.deco1 {
+    font-size: 20px;
+    letter-spacing: -2px;
+}
+
+.photo-profil {
+    height: 250px;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+    object-fit: cover;
+    object-position: 5% 5%;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+@media (max-width: 992px) {
+    .name {
+        font-size: 50px;
+    }
+
+    .section-about {
+        height: 2000px;
+        justify-content: center;
+    }
+
+    .section-about h1:first-of-type {
+        font-size: 65px;
+        margin: 10px;
+    }
+
+    .section-about h2:nth-of-type(1) {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .section-about h1:nth-of-type(2) {
+        font-size: 52px;
+    }
+
+    .section-about div h2:nth-of-type(2) {
+        font-size: 30px;
+    }
+
+    .div-about {
+        max-width: 800px;
+        height: 500px;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .stage {
+        font-size: 45px !important;
+    }
+
+    .break-about {
+        display: inline;
+    }
+
+    .apropos {
+        gap: 5px
+    }
+
+    .photo-profil {
+        height: 350px;
+        aspect-ratio: 1 / 1;
+        flex-shrink: 0;
+        object-fit: cover;
+        object-position: 5% 5%;
+        margin-top: 50px;
+        border-radius: 50%;
+    }
+
+    .deco1 {
+        font-size: 40px;
+        letter-spacing: -5px;
+    }
+
+    .apropos {
+        margin-top: 80px;
+        flex-direction: column;
+    }
+
+    .introduction h4 {
+        font-size: 35px;
+    }
+
+    .introduction p, .button-me-contacter {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 767px) {
+    body {
+        padding-top: 115px;
+    }
+
+    .name {
+        font-size: 32px;
+    }
+
+    .section-about {
+        height: 1100px;
+        justify-content: center;
+    }
+
+    .section-about h1:first-of-type {
+        font-size: 42px;
+        margin: 8px;
+    }
+
+    .section-about h2:nth-of-type(1) {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    .section-about h1:nth-of-type(2) {
+        font-size: 34px;
+    }
+
+    .section-about div h2:nth-of-type(2) {
+        font-size: 20px;
+    }
+
+    .div-about {
+        max-width: 90%;
+        height: auto;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .stage {
+        font-size: 28px !important;
+    }
+
+    .break-about {
+        display: inline;
+    }
+
+    .apropos {
+        gap: 5px;
+        margin-top: 0px;
+        flex-direction: column;
+    }
+
+    .photo-profil {
+        height: 220px;
+        aspect-ratio: 1 / 1;
+        flex-shrink: 0;
+        object-fit: cover;
+        object-position: 5% 5%;
+        margin-top: 30px;
+        border-radius: 50%;
+    }
+
+    .deco1 {
+        font-size: 26px;
+        letter-spacing: -3px;
+    }
+
+    .introduction h4 {
+        font-size: 22px;
+    }
+
+    .introduction p, .button-me-contacter {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .section-about {
+        height: 1200px;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    body {
+        padding-top: 100px;
+    }
+}
+
+@media (max-width: 390px) {
+    body {
+        padding-top: 80px;
+    }
+
+    .menu-left h1.font-size-25px {
+        font-size: 22px;
+    }
+
+    .menu-left img {
+        padding-left: 10px;
+    }
+
+    .section-about {
+        height: 1000px;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .section-about h1:first-of-type {
+        font-size: 35px;
+        margin: 6px;
+    }
+
+    .section-about h2:nth-of-type(1) {
+        font-size: 20px;
+        margin-bottom: 6px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .section-about h1:nth-of-type(2) {
+        font-size: 30px;
+    }
+
+    .section-about div h2:nth-of-type(2) {
+        font-size: 15px;
+    }
+
+    .div-about {
+        max-width: 95%;
+        height: auto;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .stage {
+        font-size: 22px !important;
+    }
+
+    .break-about {
+        display: inline;
+    }
+
+    .apropos {
+        gap: 5px;
+        margin-top: 0px;
+        flex-direction: column;
+    }
+
+    .photo-profil {
+        height: 150px;
+        aspect-ratio: 1 / 1;
+        flex-shrink: 0;
+        object-fit: cover;
+        object-position: 5% 5%;
+        margin-top: 20px;
+        border-radius: 50%;
+    }
+
+    .deco1 {
+        font-size: 18px;
+        letter-spacing: -2px;
+    }
+
+    .introduction h4 {
+        font-size: 17px;
+    }
+
+    .introduction p, .button-me-contacter {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 335px) {
+    .section-about {
+        height: 1100px;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .section-about h1:first-of-type {
+        font-size: 32px;
+        margin: 6px;
+    }
+
+    .section-about h2:nth-of-type(1) {
+        font-size: 17px;
+        margin-bottom: 6px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .section-about h1:nth-of-type(2) {
+        font-size: 27px;
+    }
+
+}

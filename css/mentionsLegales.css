@@ -1,0 +1,124 @@
+/* ==================PAGE : MENTIONS LEGALES=======================*/
+/* ===============================================================*/
+.logo-and-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-and-name img {
+    display: block;
+    vertical-align: middle;
+}
+
+.logo-and-name .name {
+    margin: 0;
+    line-height: 1;
+}
+
+.section-mentions-legales {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px 120px;
+}
+
+.mentions-legales-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.section-mentions-legales h1, .name{
+    color: white;
+}
+
+.section-mentions-legales h1 {
+    margin: 0 auto 10px;
+    display: block;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.deco1 {
+    display: block;
+    margin: 0 auto 40px;
+    text-align: center;
+    color:white;
+}
+
+.mentions-legales-content h2 {
+    color: #fa8578;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.mentions-legales-content h2:first-of-type {
+    margin-top: 0;
+}
+
+.mentions-legales-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: justify;
+    margin: 0;
+    color: white;
+}
+
+.mentions-legales-content a {
+    color: #fa8578;
+    text-decoration: none;
+}
+
+.mentions-legales-content a:hover {
+    text-decoration: underline;
+}
+
+.mentions-legales-content strong {
+    color: #fa8578;
+}
+
+.retour-accueil {
+    display: inline-block;
+    margin-top: 50px;
+    border: 0.5px solid #fa8578;
+    color: #fa8578;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+.retour-accueil:hover {
+    background: #fa8578;
+    color: white;
+    transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+    .section-mentions-legales {
+        padding: 50px 20px 100px;
+    }
+
+    .mentions-legales-content h2 {
+        font-size: 26px;
+        margin-top: 50px;
+    }
+
+    .mentions-legales-content p {
+        font-size: 22px;
+        line-height: 1.6;
+    }
+
+    .retour-accueil {
+        font-size: 20px;
+        padding: 16px 28px;
+    }
+}
+
+
+

@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-timeline-name: --page-scroll;
+    scroll-timeline-axis: block;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 100px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif, SansSerif;
+    background: #0f172a;
+    height: fit-content;
+    overflow-x: clip;
+    max-width: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    background: #fa7676;
+    filter: blur(140px);
+    top: 33%;
+    left: 10%;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    background: #4ecdc4;
+    filter: blur(120px);
+    bottom: 10%;
+    right: 15%;
+}
+
+body::before,
+body::after {
+    z-index: -1;
+}
+
+
+@media (max-width: 767px) {
+    h1, h2, h3, h4, h5 {
+        word-break: break-word;
+    }
+}
+
+
+
+
+
