@@ -1,5 +1,9 @@
 /* ==================PAGE : MENTIONS LEGALES=======================*/
 /* ===============================================================*/
+body{
+    padding-top: 20px;
+}
+
 .logo-and-name {
     display: flex;
     align-items: center;

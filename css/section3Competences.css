@@ -27,7 +27,6 @@
 .icon-light-salmon:hover .icon-light-white,
 .icon-light-salmon2:hover .icon-light-white2 {
     opacity: 1;
-
 }
 
 @media (max-width: 992px) {
@@ -53,7 +52,6 @@
 
     .section-competences p {
         font-size: 32px !important;
-
     }
 
     .div-competences img {
@@ -261,8 +259,12 @@
         font-size: 30px !important;
     }
 
+    .section-competences h5{
+        font-size: 25px !important;
+    }
+
     .section-competences div p {
-        font-size: 16px !important;
+        font-size: 14px !important;
     }
 
 }

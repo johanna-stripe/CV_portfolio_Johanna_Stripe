@@ -65,7 +65,7 @@
     }
 
     .div-contact p, .div-contact p a{
-        font-size: 25px !important;
+        font-size: 23px !important;
     }
 
     .div-contact {
@@ -79,6 +79,10 @@
 
     .section-contact {
         padding: 0 12px;
+    }
+    .div-contact img{
+        height: 45px !important;
+        width: 45px !important;
     }
 }
 
