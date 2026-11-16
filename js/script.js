@@ -1,22 +1,9 @@
 //DECLARATIONS
-const body = document.querySelector('body')
 const nav = document.querySelector('nav')
-const logoAndName = document.querySelector('.logo-and-name')
 const menuBurger = document.querySelector('.menu-burger')
 const menuList = document.querySelector('.menu-list')
-const about = document.querySelector('.about')
-const sectionAbout = document.querySelector('.section-about')
-const competences = document.querySelector('.competences')
-const sectionCompetences = document.querySelector('.section-competences')
-const cv = document.querySelector('.cv')
-const contact = document.querySelector('.contact')
-const sectionContact = document.querySelector('.section-contact')
-const buttonContact = document.querySelector('.button-me-contacter')
-const stage = document.querySelector('.stage')
 
 //PORTFOLIO
-const portfolio = document.querySelector('.portfolio')
-const sectionPortfolio = document.querySelector('.section-portfolio')
 const portfolioMother = document.querySelector('.div-portfolio-mother')
 const divPortfolio = document.querySelectorAll('.div-portfolio')
 const portfolioTitle = document.querySelector('.portfolio-title')
@@ -59,15 +46,11 @@ const mobile = window.matchMedia('(max-width: 768px)');
 //=============================================================================
 //========================FUNCTIONS DECLARATIONS===============================
 //=============================================================================
-function scrollToPoint(title, location) {
-    title.addEventListener('click', () => {
-        menuList.classList.remove('menu-open')
-        menuBurger.classList.remove('burger-open')
-        location.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        })
-    })
+function closeMenu() {
+    menuList.classList.remove('menu-open')
+    menuBurger.classList.remove('burger-open')
+    menuBurger.setAttribute('aria-expanded', 'false')
+    menuBurger.setAttribute('aria-label', 'Ouvrir le menu')
 }
 
 let scrollPositionBeforeOpen = 0
@@ -77,6 +60,8 @@ function openPortfolio(portfolio, aside, btnEnSavoirPlus, ...otherPortfolios) {
     scrollPositionBeforeOpen = window.scrollY
     aside.classList.add('open')
     aside.scrollTop = 0
+    const closeBtn = aside.querySelector('button[class^="aside-close"]')
+    if (closeBtn) closeBtn.focus({preventScroll: true})
     deleteAllPortfolio(...otherPortfolios)
 
     const offsetTop = portfolio.offsetTop
@@ -116,6 +101,7 @@ function closePortfolio(portfolio, aside, btnEnSavoirPlus, ...otherPortfolios) {
     } else {
         portfolio.classList.remove('visibility-hidden')
     }
+    portfolio.focus({preventScroll: true})
 }
 
 function closeExternalClick(portfolio, aside, btnEnSavoirPlus, event, ...otherPortfolios) {
@@ -156,106 +142,61 @@ function restoreAllPortfolio(...portfolios) {
 
 //******************NAV & MENU BURGER********************
 menuBurger.addEventListener('click', () => {
-    menuList.classList.toggle('menu-open')
-    menuBurger.classList.toggle('burger-open')
+    const isOpen = menuList.classList.toggle('menu-open')
+    menuBurger.classList.toggle('burger-open', isOpen)
+    menuBurger.setAttribute('aria-expanded', isOpen)
+    menuBurger.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu')
 })
 
-cv.addEventListener('click', () => {
-    window.open('doc/CV_Johanna_Stripe.pdf')
+// repasse en menu horizontal : on referme le menu burger
+window.matchMedia('(min-width: 993px)').addEventListener('change', (e) => {
+    if (e.matches) closeMenu()
 })
 
-scrollToPoint(logoAndName, body);
-scrollToPoint(about, stage);
-scrollToPoint(competences, sectionCompetences);
-scrollToPoint(portfolio, sectionPortfolio);
-scrollToPoint(contact, sectionContact);
-scrollToPoint(buttonContact, sectionContact);
-
-//******************NAV BACKGROUND AU SCROLL********************
-window.addEventListener('scroll', () => {
-    if (desktop.matches || desktop_reduced.matches) {
-        if (window.scrollY > 0) {
-            nav.classList.add('nav-scrolled')
-        } else {
-            nav.classList.remove('nav-scrolled')
-        }
-    } else {
-        if (window.scrollY > 0) {
-            nav.classList.add('nav-scrolled')
-        } else {
-            nav.classList.remove('nav-scrolled')
-        }
+// Les liens d'ancre font défiler la page (CSS : scroll-behavior) ; on referme juste le menu
+document.querySelectorAll('.menu-list a, .logo-and-name').forEach((link) => {
+    link.addEventListener('click', closeMenu)
+})
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menuList.classList.contains('menu-open')) {
+        closeMenu()
+        menuBurger.focus()
     }
 })
 
+//******************NAV BACKGROUND AU SCROLL********************
+window.addEventListener('scroll', () => {
+    nav.classList.toggle('nav-scrolled', window.scrollY > 0)
+}, {passive: true})
 
-//******************PORTFOLIO 1***************************
-portfolio1.addEventListener('click', () => {
-    openPortfolio(portfolio1, aside1, btnEnSavoirPlus1, portfolio2, portfolio3, portfolio4, portfolio5, portfolio6)
+
+//******************PORTFOLIO (cartes -> détail)***************************
+const cards = [portfolio1, portfolio2, portfolio3, portfolio4, portfolio5, portfolio6]
+const detailParts = cards.map((card, i) => ({
+    card,
+    aside: document.querySelector('.aside-' + (i + 1)),
+    close: document.querySelector('.aside-close-' + (i + 1)),
+    more: document.querySelector('.en-savoir-plus-' + (i + 1)),
+    others: cards.filter((c) => c !== card)
+}))
+
+detailParts.forEach(({card, aside, close, more, others}) => {
+    // la carte est utilisable au clavier
+    card.setAttribute('role', 'button')
+    card.setAttribute('tabindex', '0')
+
+    card.addEventListener('click', () => {
+        if (!aside.classList.contains('open')) openPortfolio(card, aside, more, ...others)
+    })
+    card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault()
+            card.click()
+        }
+    })
+    close.addEventListener('click', () => closePortfolio(card, aside, more, ...others))
+    document.addEventListener('click', (e) => closeExternalClick(card, aside, more, e, ...others))
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && aside.classList.contains('open')) closePortfolio(card, aside, more, ...others)
+    })
 })
-
-buttonAsideClose1.addEventListener('click', () => {
-    closePortfolio(portfolio1, aside1, btnEnSavoirPlus1, portfolio2, portfolio3, portfolio4, portfolio5, portfolio6)
-})
-
-document.addEventListener('click', function (event) {
-    closeExternalClick(portfolio1, aside1, btnEnSavoirPlus1, event, portfolio2, portfolio3, portfolio4, portfolio5, portfolio6)
-})
-
-
-//******************PORTFOLIO 2***************************
-portfolio2.addEventListener('click', () => {
-    openPortfolio(portfolio2, aside2, btnEnSavoirPlus2, portfolio1, portfolio3, portfolio4, portfolio5, portfolio6)
-})
-
-buttonAsideClose2.addEventListener('click', () => {
-    closePortfolio(portfolio2, aside2, btnEnSavoirPlus2, portfolio1, portfolio3, portfolio4, portfolio5, portfolio6)
-})
-
-document.addEventListener('click', function (event) {
-    closeExternalClick(portfolio2, aside2, btnEnSavoirPlus2, event, portfolio1, portfolio3, portfolio4, portfolio5, portfolio6)
-})
-
-
-//******************PORTFOLIO 3***************************
-portfolio3.addEventListener('click', () => {
-    openPortfolio(portfolio3, aside3, btnEnSavoirPlus3, portfolio1, portfolio2, portfolio4, portfolio5, portfolio6)
-})
-
-buttonAsideClose3.addEventListener('click', () => {
-    closePortfolio(portfolio3, aside3, btnEnSavoirPlus3, portfolio1, portfolio2, portfolio4, portfolio5, portfolio6)
-})
-
-document.addEventListener('click', function (event) {
-    closeExternalClick(portfolio3, aside3, btnEnSavoirPlus3, event, portfolio1, portfolio2, portfolio4, portfolio5, portfolio6)
-})
-
-
-//******************PORTFOLIO 4***************************
-portfolio4.addEventListener('click', () => {
-    openPortfolio(portfolio4, aside4, btnEnSavoirPlus4, portfolio1, portfolio2, portfolio3, portfolio5, portfolio6)
-})
-
-buttonAsideClose4.addEventListener('click', () => {
-    closePortfolio(portfolio4, aside4, btnEnSavoirPlus4, portfolio1, portfolio2, portfolio3, portfolio5, portfolio6)
-})
-
-document.addEventListener('click', function (event) {
-    closeExternalClick(portfolio4, aside4, btnEnSavoirPlus4, event, portfolio1, portfolio2, portfolio3, portfolio5, portfolio6)
-})
-
-
-//******************PORTFOLIO 5***************************
-portfolio5.addEventListener('click', () => {
-    openPortfolio(portfolio5, aside5, btnEnSavoirPlus5, portfolio1, portfolio2, portfolio3, portfolio4, portfolio6)
-})
-
-buttonAsideClose5.addEventListener('click', () => {
-    closePortfolio(portfolio5, aside5, btnEnSavoirPlus5, portfolio1, portfolio2, portfolio3, portfolio4, portfolio6)
-})
-
-document.addEventListener('click', function (event) {
-    closeExternalClick(portfolio5, aside5, btnEnSavoirPlus5, event, portfolio1, portfolio2, portfolio3, portfolio4, portfolio6)
-})
-
-

@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Johanna Stripe, développeuse web full stack en formation à Toulon, à la recherche d'un stage de 2 mois (oct-nov 2026). Portfolio HTML/CSS/JS, communication digitale et graphisme.">
+    <meta name="description" content="Johanna Stripe, UX/UI Designer et développeuse front-end (HTML, CSS, JavaScript, React). 8 ans d'expérience en communication et événementiel. Disponible dès janvier 2027, région toulonnaise.">
     <meta name="author" content="Johanna Stripe">
 
     <!-- Open Graph (aperçu réseaux sociaux type LinkedIn) -->
-    <meta property="og:title" content="Johanna Stripe - Développeur Web Full Stack">
-    <meta property="og:description" content="Portfolio de Johanna Stripe, développeur web full stack en formation, à la recherche d'un stage de 2 mois (oct-nov 2026).">
+    <meta property="og:title" content="Johanna Stripe - UX/UI Designer &amp; Développeuse Front-End">
+    <meta property="og:description" content="Portfolio de Johanna Stripe : du besoin utilisateur au prototype haute-fidélité, des interfaces claires et réalisables. Disponible dès janvier 2027.">
     <meta property="og:image" content="img/Profil/Linkedin.jpg">
     <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0f172a">
 
-    <title>Johanna STRIPE - Web Developer | Full Stack</title>
+    <title>Johanna STRIPE - Design d'interfaces &amp; Expérience utilisateur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/settings.css">
     <link rel="stylesheet" href="css/navBar.css">
@@ -25,217 +29,211 @@
     <link rel="icon" href="img/logo_JS.png">
 </head>
 
-<!--**************END OF NAV**************-->
 <body>
-<!--**************SECTION 1 : HOME*****************-->
 <!--**************START OF NAV**************-->
-<nav class="nav flex align-items-center h-50px p-25px position-fixed">
+<nav class="nav flex align-items-center position-fixed" aria-label="Navigation principale">
     <div class="menu-left flex align-items-center">
-        <button class="menu-burger display-none" aria-label="menu">
+        <button class="menu-burger display-none" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-list">
             <span></span>
             <span></span>
             <span></span>
         </button>
-        <div class ="logo-and-name flex align-items-center cursor-pointer">
-            <img src="img/logo_JS (1).png" height="75" width="150" alt="logo_JS"/>
-            <h1 class="name c-white font-size-25px">Johanna STRIPE</h1>
-        </div>
-        <div class="flex flex-direction-column align-items-center cursor-pointer">
-        </div>
+        <a class="logo-and-name flex align-items-center text-decoration-none" href="#top">
+            <img src="img/logo_JS (1).png" height="75" width="150" alt="Logo Johanna Stripe"/>
+            <span class="name c-white">Johanna STRIPE</span>
+        </a>
     </div>
     <div class="menu">
-        <ul class="menu-list list-none flex align-items-center m-left-20px gap-40px p-0 c-white font-size-20px ">
-            <li class="cursor-pointer about">Introduction</li>
-            <li class="cursor-pointer competences">Compétences</li>
-            <li class="cursor-pointer portfolio">Portfolio</li>
-            <li class="cursor-pointer cv">CV (.pdf)</li>
-            <li class="cursor-pointer contact">Contact</li>
+        <ul id="menu-list" class="menu-list list-none flex align-items-center p-0 c-white">
+            <li><a class="about" href="#about">Introduction</a></li>
+            <li><a class="competences" href="#competences">Compétences</a></li>
+            <li><a class="portfolio" href="#portfolio">Portfolio</a></li>
+            <li><a class="cv" href="doc/CV.pdf" target="_blank" rel="noopener">CV (.pdf)</a></li>
+            <li><a class="contact" href="#contact">Contact</a></li>
         </ul>
     </div>
 </nav>
-<section class="section-about flex flex-direction-column align-items-center h-600px m-top-20px m-bottom-60px">
-    <div class="div-about flex flex-direction-column align-items-center justify-content-center h-300px">
-        <h1 class="c-white font-size-42px m-5px uppercase">Développeur Web Full Stack Junior</h1>
-        <h2 class="c-white font-size-20px font-f font-italique m-0">en formation Développement Web et anciennement</h2>
-        <h1 class="c-white font-size-30px m-5px uppercase">Responsable en Communication Digitale</h1>
-        <h2 class="stage c-salmonfa8578 text-align-center uppercase font-bold font-size-30px font-light m-top-20px m-bottom-10px">À la recherche
-            d'un stage de 2 mois (Oct-Nov 2026)</h2>
-        <div class="deco1 c-salmonfa8578 m-bottom-20px m-0 ">————— ◇ —————</div>
+<section id="about" class="section-about flex flex-direction-column align-items-center">
+    <div class="div-about flex flex-direction-column align-items-center justify-content-center">
+        <h1 class="c-white uppercase">Développeuse web full stack <br>&amp; UX/UI Designer</h1>
+        <p class="hero-lead c-white font-italique">formée au développement web, après 8 ans en</p>
+        <p class="hero-field c-white uppercase">Communication &amp; Événementiel</p>
+        <p class="stage c-salmonfa8578 text-align-center uppercase font-bold">Disponible
+            dès janvier 2027</p>
+        <div class="deco1 c-salmonfa8578" aria-hidden="true">————— ◇ —————</div>
     </div>
 
-    <div class="apropos flex flex-direction-row align-items-center gap-40px m-40px">
+    <div class="apropos flex flex-direction-row align-items-center">
         <div class="">
             <img class="photo-profil" src="img/Profil/Linkedin.jpg"
-                 alt="photo_profil">
+                 alt="Portrait de Johanna Stripe" width="320" height="320" fetchpriority="high">
         </div>
         <div class="introduction flex flex-direction-column">
-            <h4 class="c-salmonfa8578 uppercase font-size-18px m-bottom-auto">introduction</h4>
-            <p class="c-white text-align-justify font-size-15px">
-                Après huit années d’expérience dans la communication, le tourisme et l’événementiel, je suis
-                actuellement en <b>formation professionnelle Bac+2 de Développeur Web</b> au sein de l’école La
-                Plateforme à Toulon, où j’acquiers de solides compétences en conception et réalisation de <b>projets
-                full stack</b>.
+            <h2 class="c-salmonfa8578 uppercase">Introduction</h2>
+            <p class="c-white">
+                Du besoin utilisateur au <b>prototype haute-fidélité</b>, je conçois des interfaces claires et
+                réalisables grâce à mes bases en <b>front-end</b> (HTML, CSS, JavaScript, React).
             </p>
-            <p class="c-white text-align-justify font-size-15px m-bottom-30px">
-                Dans le cadre de cette formation, <b>je suis à la recherche d’un stage d’une durée de deux mois
-                (28/09/26 au 20/11/26)</b> afin de mettre en pratique mes connaissances, développer mes compétences
-                techniques et contribuer activement à des projets concrets au sein d’une équipe dynamique.
+            <p class="c-white">
+                Mes <b>8 ans d'expérience</b> en communication et événementiel ont affûté mon œil graphique et ma
+                créativité : j'y ai appris à argumenter mes choix, à travailler en équipe et à tenir les délais.
+                Diplôme <b>Bac+2 Développeur Web &amp; Web Mobile</b> (La Plateforme, Toulon) prévu en janvier 2027,
+                <b>je suis disponible dès cette date</b>.
             </p>
-            <button class="button-me-contacter align-self-flex-start font-bold border-none p-12px uppercase b-salmonfa8578 c-white text-decoration-none font-size-15px cursor-pointer">
+            <a href="#contact" class="button-me-contacter align-self-flex-start font-bold uppercase text-decoration-none cursor-pointer">
                 Contactez-moi
-                <span class="inline-block">➜</span>
-            </button>
+                <span class="inline-block" aria-hidden="true">➜</span>
+            </a>
         </div>
     </div>
 
 </section>
 <!--******************SECTION : CREATION DE SITE*********************-->
-<section class="creation-sites flex flex-direction-column justify-content-center align-items-center h-550px">
+<section class="creation-sites flex flex-direction-column justify-content-center align-items-center" aria-labelledby="creation-title">
     <div class="text-align-center c-white">
-        <h1 class="m-0 c-white m-top-60px font-size-40px uppercase">Création de site internet</h1>
-        <h4 class="m-0 c-white m-top-10px m-bottom-20px font-size-18px uppercase">Sites vitrines, événementiel,
-            corporate, e-commerce</h4>
+        <h2 id="creation-title" class="c-white uppercase">Création de site internet</h2>
+        <p class="creation-sub c-white uppercase">Sites vitrines, événementiel,
+            corporate, e-commerce</p>
     </div>
-    <div class="deco1 c-white m-bottom-20px">————— ◇ —————</div>
+    <div class="deco1 c-white" aria-hidden="true">————— ◇ —————</div>
 
     <div class="text-align-center c-white">
-        <h1 class="c-white m-0 font-size-35px">COMMUNICATION DIGITALE <br id="break-mobile display-none">& CONCEPTION GRAPHIQUE</h1>
-        <h4 class="c-white m-top-10px m-bottom-30px font-size-18px uppercase">Infographie, supports publicitaires,
-            <br id="break-mobile display-none"> logos, brochures,
-            affichage, montage video etc.
-        </h4>
+        <h3 class="c-white">DESIGN D'INTERFACES <br>&amp; EXPÉRIENCE UTILISATEUR</h3>
+        <p class="creation-sub c-white uppercase">Infographie, supports publicitaires,
+            <br> logos, brochures,
+            affichage, montage vidéo, etc.
+        </p>
     </div>
 
-    <div class="div-cafe flex flex-direction-row m-top-10px align-items-center justify-content-center m-top-30px m-bottom-60px">
+    <ol class="div-cafe list-none p-0">
 
-        <div class="flex flex-direction-column align-items-center w-150px position-relative">
-            <p class="numbers c-white b-salmonfa8578 border-radius-50 position-absolute">1</p>
-            <img class="b-white p-25px border-radius-50" src="img/icons/coffee-black.svg" alt="logo_coffee">
-            <p class="text-cafe c-white">Café</p>
-        </div>
-        <div class="flex flex-direction-column align-items-center w-150px position-relative ">
-            <p class="numbers c-white b-salmonfa8578 border-radius-50 position-absolute">2</p>
-            <img class="b-white p-25px border-radius-50" src="img/icons/paint-brush-black.svg" alt="logo_paint">
-            <p class="text-cafe c-white">Design</p>
-        </div>
-        <div class="flex flex-direction-column align-items-center w-150px position-relative">
-            <p class="numbers c-white b-salmonfa8578 border-radius-50 position-absolute">3</p>
-            <img class="b-white p-25px border-radius-50" src="img/icons/code-black.svg" alt="logo_code">
-            <p class="text-cafe c-white">Code</p>
-        </div>
-        <div class="flex flex-direction-column align-items-center w-150px position-relative">
-            <p class="numbers c-white b-salmonfa8578 border-radius-50 position-absolute">4</p>
-            <img class="b-white p-25px border-radius-50" src="img/icons/bug-black.svg" alt="logo_test">
-            <p class="text-cafe c-white">Tests</p>
-        </div>
-        <div class="flex flex-direction-column align-items-center w-150px position-relative">
-            <p class="numbers c-white b-salmonfa8578 border-radius-50 position-absolute">5</p>
-            <img class="b-white p-25px border-radius-50" src="img/icons/note-pencil-black.svg" alt="logo_pencil">
-            <p class="text-cafe c-white">Analyse</p>
-        </div>
-        <div class="flex flex-direction-column align-items-center w-150px position-relative ">
-            <p class="numbers c-white b-salmonfa8578 border-radius-50 position-absolute">6</p>
-            <img class="b-white p-25px border-radius-50" src="img/icons/check-square-black.svg" alt="logo_check">
-            <p class="text-cafe c-white">Mise en ligne</p>
-        </div>
-    </div>
+        <li class="flex flex-direction-column align-items-center position-relative">
+            <span class="numbers c-navy0f172a b-salmonfa8578 border-radius-50 position-absolute" aria-hidden="true">1</span>
+            <img class="b-white border-radius-50" src="img/icons/coffee-black.svg" alt="" width="84" height="84">
+            <span class="text-cafe c-white">Café</span>
+        </li>
+        <li class="flex flex-direction-column align-items-center position-relative">
+            <span class="numbers c-navy0f172a b-salmonfa8578 border-radius-50 position-absolute" aria-hidden="true">2</span>
+            <img class="b-white border-radius-50" src="img/icons/paint-brush-black.svg" alt="" width="84" height="84">
+            <span class="text-cafe c-white">Design</span>
+        </li>
+        <li class="flex flex-direction-column align-items-center position-relative">
+            <span class="numbers c-navy0f172a b-salmonfa8578 border-radius-50 position-absolute" aria-hidden="true">3</span>
+            <img class="b-white border-radius-50" src="img/icons/code-black.svg" alt="" width="84" height="84">
+            <span class="text-cafe c-white">Code</span>
+        </li>
+        <li class="flex flex-direction-column align-items-center position-relative">
+            <span class="numbers c-navy0f172a b-salmonfa8578 border-radius-50 position-absolute" aria-hidden="true">4</span>
+            <img class="b-white border-radius-50" src="img/icons/bug-black.svg" alt="" width="84" height="84">
+            <span class="text-cafe c-white">Tests</span>
+        </li>
+        <li class="flex flex-direction-column align-items-center position-relative">
+            <span class="numbers c-navy0f172a b-salmonfa8578 border-radius-50 position-absolute" aria-hidden="true">5</span>
+            <img class="b-white border-radius-50" src="img/icons/note-pencil-black.svg" alt="" width="84" height="84">
+            <span class="text-cafe c-white">Analyse</span>
+        </li>
+        <li class="flex flex-direction-column align-items-center position-relative">
+            <span class="numbers c-navy0f172a b-salmonfa8578 border-radius-50 position-absolute" aria-hidden="true">6</span>
+            <img class="b-white border-radius-50" src="img/icons/check-square-black.svg" alt="" width="84" height="84">
+            <span class="text-cafe c-white">Mise en ligne</span>
+        </li>
+    </ol>
 
 </section>
 
 <!--**************SECTION : COMPETENCES*****************-->
-<section class="section-competences m-0 c-white">
+<section id="competences" class="section-competences m-0 c-white">
     <h2 class="font-size-40px text-align-center uppercase p-top-50px m-bottom-auto">Compétences</h2>
 
-    <div class="deco1 c-salmon font-size-30px text-align-center m-bottom-40px">————— ◇ —————</div>
+    <div class="deco1 c-salmon font-size-30px text-align-center m-bottom-40px" aria-hidden="true">————— ◇ —————</div>
 
     <div class="div-competences flex flex-direction-row justify-content-center align-items-center gap-80px m-0">
+
         <!--DIV GAUCHE-->
         <div class="list-competences-graphisme flex flex-1 flex-direction-column align-items-end text-align-right gap-40px">
             <div class="flex flex-direction-column align-items-end">
-                <h4 class="title-competences c-salmonfa8578 font-size-25px uppercase m-0">Web design & Graphisme</h4>
-                <p class="sous-titre c-salmonfa8578 font-size-15px m-0">(en cours d'acquisition durant la formation)</p>
+                <h3 class="title-competences c-salmonfa8578 uppercase m-0">UX/UI &amp; Graphisme</h3>
             </div>
             <div class="flex align-items-center gap-20px position-relative ">
                 <div class="m-right-80px">
                     <h5 class="uppercase font-size-20px m-0">Communication graphique</h5>
-                    <p class="font-size-15px m-0">Infographie, identité visuelle, publicité, signalétique etc.</p>
+                    <p class="font-size-15px m-0">Infographie, identité visuelle, affichage, logo, montage vidéo</p>
                 </div>
-                <img class="icon-light-salmon position-absolute" src="img/icons/pencil.svg" alt="logo_pencil">
-                <img class="icon-light-white b-salmon position-absolute opacity-0" src="img/icons/pencil-white.svg"
-                     alt="logo_pencil">
+                <img class="icon-light-salmon position-absolute" src="img/icons/pencil.svg" alt="">
+                <img class="icon-light-white b-salmon position-absolute opacity-0" aria-hidden="true" src="img/icons/pencil-white.svg"
+                     alt="">
             </div>
 
             <div class="flex align-items-center gap-20px position-relative">
                 <div class="m-right-80px">
                     <h5 class="uppercase font-size-20px m-0 ">UX / UI DESIGN</h5>
-                    <p class="font-size-15px m-0">Maquettage, parcours utilisateur, wireframes, arborescence</p>
+                    <p class="font-size-15px m-0">Analyse des besoins, parcours utilisateurs, arborescences, wireframes, prototypes haute-fidélité (Figma, Penpot)</p>
                 </div>
-                <img class="icon-light-salmon position-absolute" src="img/icons/user.svg" alt="logo_user">
-                <img class="icon-light-white b-salmon position-absolute opacity-0" src="img/icons/user_white.svg"
-                     alt="logo_user">
+                <img class="icon-light-salmon position-absolute" src="img/icons/user.svg" alt="">
+                <img class="icon-light-white b-salmon position-absolute opacity-0" aria-hidden="true" src="img/icons/user_white.svg"
+                     alt="">
             </div>
 
             <div class="flex align-items-center gap-20px position-relative">
                 <div class="m-right-80px">
-                    <h5 class="uppercase font-size-20px m-0">BRANDING & STRATÉGIE</h5>
+                    <h5 class="uppercase font-size-20px m-0">BRANDING &amp; STRATÉGIE</h5>
                     <p class="font-size-15px m-0">Positionnement, storytelling, valeurs de marque</p>
                 </div>
-                <img class="icon-light-salmon position-absolute" src="img/icons/light.svg" alt="logo_light">
-                <img class="icon-light-white b-salmon position-absolute opacity-0" src="img/icons/light_white.svg"
-                     alt="logo_light">
+                <img class="icon-light-salmon position-absolute" src="img/icons/light.svg" alt="">
+                <img class="icon-light-white b-salmon position-absolute opacity-0" aria-hidden="true" src="img/icons/light_white.svg"
+                     alt="">
             </div>
             <div class="flex align-items-center gap-20px position-relative">
                 <div class="m-right-80px">
                     <h5 class="uppercase font-size-20px m-0">CRÉATION DE CONTENUS</h5>
                     <p class="font-size-15px m-0">Réseaux sociaux, montage vidéo, bannières web, templates</p>
                 </div>
-                <img class="icon-light-salmon position-absolute" src="img/icons/desktop.svg" alt="logo_desktop">
-                <img class="icon-light-white b-salmon position-absolute opacity-0" src="img/icons/desktop-white.svg"
-                     alt="logo_desktop">
+                <img class="icon-light-salmon position-absolute" src="img/icons/desktop.svg" alt="">
+                <img class="icon-light-white b-salmon position-absolute opacity-0" aria-hidden="true" src="img/icons/desktop-white.svg"
+                     alt="">
             </div>
-
         </div>
+
         <!--DIV DROITE-->
         <div class="list-competences-web flex flex-1 flex-direction-column align-items-start gap-40px">
             <div class="flex flex-direction-column align-items-start">
-                <h4 class="title-competences c-salmonfa8578 font-size-25px uppercase m-0">développement web</h4>
-                <p class="sous-titre c-salmonfa8578 font-size-15px m-0">(en cours d’acquisition durant la formation)</p>
+                <h3 class="title-competences c-salmonfa8578 uppercase m-0">Développement web</h3>
             </div>
             <div class="flex align-items-center gap-20px position-relative">
-                <img class="icon-light-salmon2 position-absolute" src="img/icons/palette.svg" alt="logo_palette">
-                <img class="icon-light-white2 b-salmon position-absolute opacity-0" src="img/icons/palette-white.svg"
-                     alt="logo_palette">
+                <img class="icon-light-salmon2 position-absolute" src="img/icons/palette.svg" alt="">
+                <img class="icon-light-white2 b-salmon position-absolute opacity-0" aria-hidden="true" src="img/icons/palette-white.svg"
+                     alt="">
                 <div class="m-left-80px">
-                    <h5 class="uppercase font-size-20px m-0">Language front-end</h5>
-                    <p class="font-size-15px m-0">HTML / CSS / JavaScript / React</p>
+                    <h5 class="uppercase font-size-20px m-0">Langages front-end</h5>
+                    <p class="font-size-15px m-0">HTML / CSS / JavaScript / React / Next.js / TypeScript</p>
                 </div>
             </div>
             <div class="flex align-items-center gap-20px position-relative">
-                <img class="icon-light-salmon2 position-absolute" src="img/icons/coffee.svg" alt="logo_coffee">
-                <img class="icon-light-white2 b-salmon position-absolute opacity-0" src="img/icons/coffee-white.svg"
-                     alt="logo_coffee">
+                <img class="icon-light-salmon2 position-absolute" src="img/icons/coffee.svg" alt="">
+                <img class="icon-light-white2 b-salmon position-absolute opacity-0" aria-hidden="true" src="img/icons/coffee-white.svg"
+                     alt="">
                 <div class="m-left-80px">
-                    <h5 class="uppercase font-size-20px m-0">Language back-end</h5>
+                    <h5 class="uppercase font-size-20px m-0">Langages back-end</h5>
                     <p class="font-size-15px m-0">Node.js / Express.js</p>
                 </div>
             </div>
             <div class="flex align-items-center gap-20px position-relative">
-                <img class="icon-light-salmon2 position-absolute" src="img/icons/sql_white.svg" alt="logo_sql">
-                <img class="icon-light-white2 b-salmon position-absolute opacity-0" src="img/icons/sql.svg"
-                     alt="logo_sql">
+                <img class="icon-light-salmon2 position-absolute" src="img/icons/sql_white.svg" alt="">
+                <img class="icon-light-white2 b-salmon position-absolute opacity-0" aria-hidden="true" src="img/icons/sql.svg"
+                     alt="">
                 <div class="m-left-80px">
                     <h5 class="uppercase font-size-20px m-0">Base de données</h5>
                     <p class="font-size-15px m-0">SQL / MYSQL</p>
                 </div>
             </div>
             <div class="flex align-items-center gap-20px position-relative">
-                <img class="icon-light-salmon2 position-absolute" src="img/icons/mouse-simple.svg" alt="logo_mouse">
+                <img class="icon-light-salmon2 position-absolute" src="img/icons/mouse-simple.svg" alt="">
                 <img class="icon-light-white2 b-salmonfa8578 position-absolute opacity-0"
-                     src="img/icons/mouse-white).svg"
-                     alt="logo_mouse">
+                     src="img/icons/mouse-white.svg"
+                     alt="">
                 <div class="m-left-80px">
-                    <h5 class="uppercase font-size-20px m-0">IDE / OUTILS</h5>
-                    <p class="font-size-15px m-0">IntelliJ IDEA / Visual Studio Code / Github / Figma</p>
+                    <h5 class="uppercase font-size-20px m-0">Outils</h5>
+                    <p class="font-size-15px m-0">IntelliJ IDEA / VS Code / GitHub / Figma / Penpot / Adobe / Canva</p>
                 </div>
             </div>
 
@@ -245,61 +243,70 @@
     <!--DIV BOTTOM-->
 
     <div class="langues flex flex-direction-column gap-20px m-top-50px align-items-center">
-        <h4 class=" title-competences c-salmonfa8578 font-size-20px uppercase m-0 text-align-center ">Langues maîtrisées</h4>
+        <h3 class="title-competences c-salmonfa8578 uppercase m-0 text-align-center">Langues maîtrisées</h3>
        <div class="langues-mother flex flex-direction-column gap-20px align-items-flex-start">
         <div class="flex gap-10px align-items-center">
-            <img class="flag align-items-flex-start" src="img/FR_flag.png" height="36" width="54"/>
+            <img class="flag align-items-flex-start" src="img/FR_flag.png" height="36" width="54" alt=""/>
             <p class="uppercase font-size-20px m-0">Français (native)</p>
         </div>
         <div class="flex gap-10px align-items-center m-bottom-40px">
-            <img class="flag align-items-flex-start" src="img/EN_flag.png" height="36" width="54"/>
+            <img class="flag align-items-flex-start" src="img/EN_flag.png" height="36" width="54" alt=""/>
             <p class="uppercase font-size-20px m-0">Anglais (courant)</p>
         </div>
     </div>
     </div>
-    <div class="deco1 font-size-30px text-align-center">
-        ——————————————————————————————————————————————————————————————————
-    </div>
+    <div class="deco-long" aria-hidden="true"></div>
 
 </section>
 
 <!--****************PORTFOLIO*********************-->
-<section class="section-portfolio m-0 c-white ">
+<section id="portfolio" class="section-portfolio m-0 c-white">
 
     <h2 class="portfolio-title font-size-40px text-align-center uppercase p-top-30px m-bottom-auto">portfolio</h2>
-    <div class="deco1 c-salmon font-size-30px text-align-center m-bottom-40px">————— ◇ —————</div>
-
+    <div class="deco1 c-salmon font-size-30px text-align-center m-bottom-20px" aria-hidden="true">————— ◇ —————</div>
     <div class="div-portfolio-mother flex flex-wrap justify-content-space-evenly position-relative m-left-40px m-right-40px">
+
+        <!--------------- DIV 6 : LE TEMPS D'UNE TASSE (affichée en premier) ---------------->
+        <div class="div-portfolio portfolio-6 flex flex-direction-column cursor-pointer p-30px">
+            <img class="m-bottom-20px align-self-center" src="img/LeTempsDuneTasse_700.jpg" width="350" height="350"
+                 alt="Site Le temps d'une tasse affiché sur écran d'ordinateur, portable, tablette et téléphone">
+            <div class="w-350px align-self-center">
+                <h4 class="uppercase m-0 p-0 text-align-justify">Site e-commerce : Le temps d'une tasse</h4>
+                <p class="m-0">Node.js, React, MySQL, Docker</p>
+                <span class="badge-wip">En cours de développement</span>
+                <p class="en-savoir-plus-6">En savoir plus <span class="inline-block">➜</span></p>
+            </div>
+        </div>
 
         <!--------------- DIV 1 HOBBITON ---------------->
         <div class="div-portfolio portfolio-1 flex flex-direction-column cursor-pointer p-30px">
-            <img class="m-bottom-20px align-self-center" src="img/Site_hobbiton/portfolio_hobbiton.png" width="350px" height="350px"
-                 alt="site_hobbiton">
+            <img class="m-bottom-20px align-self-center" src="img/Site_hobbiton/portfolio_hobbiton.jpg" width="350" height="350" loading="lazy"
+                 alt="Aperçu du site Hobbiton Movie Set Tours">
             <div class="w-350px align-self-center">
-                <h4 class="uppercase m-0 p-0 text-align-justify">Reproduction d'un site en HTML/ CSS</h4>
-                <p class="m-0">Site Hobbiton™ Movie Set Tours</p>
+                <h4 class="uppercase m-0 p-0 text-align-justify">Intégration responsive d'un site existant</h4>
+                <p class="m-0">Hobbiton™ Movie Set Tours · HTML, CSS, JavaScript</p>
                 <p class="en-savoir-plus-1">En savoir plus <span class="inline-block">➜</span></p>
             </div>
         </div>
 
         <!--------------- DIV 2 KANBAN ---------------->
         <div class="div-portfolio portfolio-2 flex flex-direction-column cursor-pointer p-30px">
-            <img class="m-bottom-20px align-self-center" src="img/Kanban/Kanban.png" width="350px" height="350px"
-                 alt="projet_Kanban">
+            <img class="m-bottom-20px align-self-center" src="img/Kanban/Kanban.jpg" width="350" height="350" loading="lazy"
+                 alt="Aperçu de l'application Kanban">
             <div class="w-350px align-self-center">
-                <h4 class="uppercase m-0 p-0 text-align-justify ">Création d'un tableau Kanban</h4>
-                <p class="m-0">HTML/ CSS/ JAVASCRIPT/ LOCAL STORAGE</p>
+                <h4 class="uppercase m-0 p-0 text-align-justify ">Application de gestion de tâches (Kanban)</h4>
+                <p class="m-0">Une interface simple et intuitive · JavaScript, Local Storage</p>
                 <p class="en-savoir-plus-2">En savoir plus <span class="inline-block">➜</span></p>
             </div>
         </div>
 
         <!--------------- DIV 3 VPE ---------------->
         <div class="div-portfolio portfolio-3 flex flex-direction-column cursor-pointer p-30px">
-            <img class="m-bottom-20px align-self-center" src="img/CIVP/Format%20Carré%20FR.jpeg" width="350px" height="350px"
-                 alt="vins_de_provence_campagne_de_communication">
+            <img class="m-bottom-20px align-self-center" src="img/CIVP/Format%20Carré%20FR.jpg" width="350" height="350" loading="lazy"
+                 alt="Visuel de la campagne Vins de Provence Expériences">
             <div class="w-350px align-self-center">
-                <h4 class="uppercase m-0 p-0 text-align-justify">Campagne de communication</h4>
-                <p class="m-0 text-align-justify">Pour l’événement BtoB "Vins de Provence Expériences” en 2023 à Marseille</p>
+                <h4 class="uppercase m-0 p-0 text-align-justify">Identité et parcours visiteur d'un événement BtoB</h4>
+                <p class="m-0 text-align-justify">Vins de Provence Expériences · Marseille, 2023</p>
                 <p class="en-savoir-plus-3">En savoir plus <span class="inline-block">➜</span></p>
             </div>
         </div>
@@ -307,45 +314,31 @@
 
         <!--------------- DIV 4 VVC---------------->
         <div class="div-portfolio portfolio-4 flex flex-direction-column cursor-pointer p-30px">
-            <img class="m-bottom-20px align-self-center" src="img/Var%20Verdon%20Challenge/VVC_portfolio.png" width="350px"
-                 height="350px"
-                 alt="site_hobbiton">
+            <img class="m-bottom-20px align-self-center" src="img/Var%20Verdon%20Challenge/VVC_portfolio.jpg" width="350" height="350" loading="lazy"
+                 alt="Brochure Var Verdon Challenge">
             <div class="w-350px align-self-center">
-                <h4 class="uppercase m-0 p-0 text-align-justify">Création Brochure pour événement sportif</h4>
-                <p class="m-0">Var Verdon Challenge</p>
+                <h4 class="uppercase m-0 p-0 text-align-justify">Hiérarchie et lisibilité d'une brochure</h4>
+                <p class="m-0">Dossier de partenariat · Var Verdon Challenge</p>
                 <p class="en-savoir-plus-4">En savoir plus <span class="inline-block">➜</span></p>
             </div>
         </div>
 
         <!--------------- DIV 5 GD---------------->
         <div class="div-portfolio portfolio-5 flex flex-direction-column cursor-pointer p-30px">
-            <img class="m-bottom-20px align-self-center" src="img/E.Leclerc/gd_portfolio.png" width="350px" height="350px" alt="leclerc_logo">
+            <img class="m-bottom-20px align-self-center" src="img/E.Leclerc/gd_portfolio.jpg" width="350" height="350" loading="lazy" alt="Aperçu de supports de communication E.Leclerc">
             <div class="text-align-justify flex flex-direction-column flex-1 w-350px align-self-center">
-                <h4 class="uppercase m-0 p-0 text-align-justify">Communication digitale en Grande Distribution</h4>
-                <p class="m-0 text-align-justify">Affiches, catalogues, réseaux sociaux, montage vidéo etc.</p>
+                <h4 class="uppercase m-0 p-0 text-align-justify">Design de communication en grande distribution</h4>
+                <p class="m-0 text-align-justify">Lisibilité, charte et formats multiples · E.Leclerc</p>
                 <p class="en-savoir-plus-5 m-top-auto">En savoir plus <span class="inline-block">➜</span></p>
             </div>
         </div>
 
-        <!--------------- DIV 6 ??? ---------------->
-        <div class="div-portfolio visibility-hidden portfolio-6 flex flex-direction-column cursor-pointer p-30px">
-            <img class="m-bottom-20px align-self-center" src="img/Site_hobbiton/portfolio_hobbiton.png" width="350px"
-                 height="350px"
-                 alt="site_hobbiton">
-            <div class="w-350px align-self-center">
-                <h4 class="uppercase m-0 p-0 text-align-justify">Création d'un tableau Kanban</h4>
-                <p class="m-0">HTML/CSS/JS/Local Storage</p>
-                <p class="en-savoir-plus-6">En savoir plus <span class="inline-block">➜</span></p>
-            </div>
-        </div>
-
-
         <!-------------- ASIDE DIV 1 HOBBITON ------------->
         <aside class="aside-1 c-white w-60 m-left-auto m-right-20px">
-            <button class="aside-close-1">✕</button>
+            <button class="aside-close-1" aria-label="Fermer le détail du projet">✕</button>
 
             <div class="aside-header">
-                <h4 class="uppercase m-0 font-size-22px">Reproduction d'un site en HTML/CSS</h4>
+                <h4 class="uppercase m-0 font-size-22px">Intégration responsive d'un site existant</h4>
                 <a class="m-0 c-white text-decoration-none cursor-pointer" href="https://www.hobbitontours.com/">Hobbiton™
                     Movie Set Tours (official version)</a>
 
@@ -354,6 +347,7 @@
                     <span class="key_info_projet">CSS</span>
                     <span class="key_info_projet">JavaScript</span>
                     <span class="key_info_projet">Responsive</span>
+                    <span class="key_info_projet">Intégration</span>
                 </div>
             </div>
 
@@ -361,27 +355,26 @@
 
             <div class="aside-left flex flex-direction-column flex-1">
                 <div>
-                    <h5 class="c-salmonfa8578 uppercase font-size-18px m-0">À propos du projet</h5>
+                    <h5 class="c-salmonfa8578 uppercase font-size-18px m-0">Contexte</h5>
                     <div class="a-propos-du-projet flex flex-direction-column align-items-start">
-                        <p class="font-size-14px m-bottom-20px m-top-10px text-align-justify">
-                            <b>De la maquette au navigateur :</b> reproduction fidèle d'un site officiel dans le
-                            cadre d'un projet école.
-                            <br>
-                            Exercice d'intégration complet basé sur le site de Hobbiton™ Movie Set Tours. Ce projet
-                            en HTML, CSS et JavaScript natif a été l'occasion idéale de structurer un code propre, de
-                            concevoir un design 100% responsive et de gérer l'interactivity utilisateur, le tout en
-                            respectant scrupuleusement l'identité visuelle de la marque d'origine.
-                        </p>
+                        <p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Reproduction fidèle du site officiel de Hobbiton™ Movie Set Tours, réalisée dans le cadre de ma formation.</p>
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-0 m-top-10px">Mon rôle</h5>
+<p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Analyser la structure et la hiérarchie de l'information du site, puis l'intégrer en HTML, CSS et JavaScript natif.</p>
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-0 m-top-10px">Démarche</h5>
+<p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">J'ai relevé l'identité visuelle de la marque (couleurs, typographies, images) pour la respecter scrupuleusement, et pensé la mise en page pour que le site reste lisible et utilisable du mobile au grand écran.</p>
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-0 m-top-10px">Ce que j'en retiens</h5>
+<p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Le responsive n'est pas une adaptation de dernière minute : c'est une contrainte à intégrer dès la structure de la page. Ce projet m'a aussi appris à structurer un code propre.</p>
+
                         <a href="https://johanna-stripe.github.io/reproduction_existing_site/" class="button-voir-site text-decoration-none m-bottom-20px">Voir le site ➜</a>
                     </div>
                 </div>
             </div>
 
             <div class="aside-screenshots flex-1">
-                <img src="img/Site_hobbiton/Screenshot1.png" class="screenshot-main" alt="">
+                <img src="img/Site_hobbiton/Screenshot1.jpg" class="screenshot-main" alt="Capture d'écran du projet">
                 <div class="flex gap-10px">
-                    <img src="img/Site_hobbiton/Screenshot2.png" class="screenshot-small" alt="">
-                    <img src="img/Site_hobbiton/Screenshot3.png" class="screenshot-small" alt="">
+                    <img src="img/Site_hobbiton/Screenshot2.jpg" class="screenshot-small" alt="Capture d'écran du projet">
+                    <img src="img/Site_hobbiton/Screenshot3.jpg" class="screenshot-small" alt="Capture d'écran du projet">
                 </div>
             </div>
         </aside>
@@ -389,12 +382,12 @@
 
         <!-------------- ASIDE DIV 2 Kanban ------------->
         <aside class="aside-2 c-white w-60 m-left-auto m-right-20px">
-            <button class="aside-close-2">✕</button>
+            <button class="aside-close-2" aria-label="Fermer le détail du projet">✕</button>
 
             <div class="aside-header">
-                <h4 class="uppercase m-0 font-size-22px">Reproduction d'un site en HTML/CSS/JS</h4>
-                <a class="m-0 c-white text-decoration-none cursor-pointer" href="https://www.hobbitontours.com/">Hobbiton™
-                    Movie Set Tours (official version)</a>
+                <h4 class="uppercase m-0 font-size-22px">Application de gestion de tâches (Kanban)</h4>
+                <a class="m-0 c-white text-decoration-none cursor-pointer" href="https://johanna-stripe.github.io/Kanban_Tab/">Kanban Tab
+                    (voir en ligne)</a>
 
                 <div class="tags flex gap-10px m-top-10px">
                     <span class="key_info_projet">HTML</span>
@@ -409,39 +402,41 @@
 
             <div class="aside-left flex flex-direction-column flex-1">
                 <div>
-                    <h5 class="c-salmonfa8578 uppercase font-size-18px m-0">À propos du projet</h5>
+                    <h5 class="c-salmonfa8578 uppercase font-size-18px m-0">Contexte</h5>
                     <div class="flex flex-direction-column align-items-start">
-                        <p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">
-                            Ce projet a été réalisé dans le cadre de ma formation afin de mettre en pratique les concepts fondamentaux de <b>JavaScript</b>. Il consiste à développer un <b>tableau Kanban</b> permettant d'organiser et de gérer des tâches de manière simple et intuitive.
-                            L'objectif était de manipuler le DOM, gérer les événements utilisateurs et mettre en œuvre une interface dynamique en utilisant <b>HTML</b>, <b>CSS</b> et <b>JAVASCRIPT</b>.
-                            Ce projet m'a permis de renforcer mes compétences en développement front-end, notamment dans la gestion des interactions utilisateur, la structuration du code JavaScript et la création d'une interface responsive.
+                        <p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Projet de formation pour mettre en pratique JavaScript : un tableau Kanban pour organiser ses tâches de façon visuelle.</p>
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-0 m-top-10px">Le besoin utilisateur</h5>
+<p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Voir d'un coup d'œil ce qui reste à faire, ce qui est en cours et ce qui est terminé, sans outil complexe.</p>
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-0 m-top-10px">Démarche</h5>
+<p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Une interface volontairement simple et intuitive, qui réagit immédiatement aux actions de l'utilisateur (DOM, événements), avec une sauvegarde dans le Local Storage pour retrouver ses tâches à la réouverture.</p>
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-0 m-top-10px">Ce que j'en retiens</h5>
+<p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Concevoir l'interface autour des actions de l'utilisateur, puis réaliser moi-même le prototype fonctionnel : de la logique JavaScript à l'interface responsive.</p>
 
-
-                        </p>
                         <a href="https://johanna-stripe.github.io/Kanban_Tab/" class="button-voir-site text-decoration-none m-bottom-20px">Voir le projet ➜</a>
                     </div>
                 </div>
             </div>
 
             <div class="aside-screenshots flex-1">
-                <img src="img/Kanban/Screenshot_kanban.png" class="screenshot-main" alt="">
+                <img src="img/Kanban/Screenshot_kanban.jpg" class="screenshot-main" alt="Capture d'écran du projet">
             </div>
         </aside>
 
 
         <!-------------- ASIDE DIV 3 VPE ------------->
         <aside class="aside-3 c-white w-60 m-left-auto m-right-20px">
-            <button class="aside-close-3">✕</button>
+            <button class="aside-close-3" aria-label="Fermer le détail du projet">✕</button>
 
             <div class="aside-header">
-                <h4 class="uppercase m-0 font-size-22px">Campagne de communication</h4>
-                <p class="m-0 c-white">Dédidée à l’événement BtoB “Vins de Provence Expériences”</p>
+                <h4 class="uppercase m-0 font-size-22px">Identité et parcours visiteur d'un événement BtoB</h4>
+                <p class="m-0 c-white">Dédiée à l’événement BtoB “Vins de Provence Expériences”</p>
 
                 <div class="tags flex gap-10px m-top-10px">
                     <span class="key_info_projet">Affichage</span>
+                    <span class="key_info_projet">Identité visuelle</span>
                     <span class="key_info_projet">Flyers</span>
                     <span class="key_info_projet">Visuels Social Media</span>
-                    <span class="key_info_projet">Programmme</span>
+                    <span class="key_info_projet">Programme</span>
                     <span class="key_info_projet">Publications magazines</span>
                 </div>
             </div>
@@ -450,22 +445,16 @@
 
             <div class="aside-screenshots flex flex-direction-column gap-20px">
                 <div>
-                    <h5 class="c-salmonfa8578 uppercase font-size-18px m-0">À propos du projet</h5>
-                    <div class="flex m-bottom-20px">
-                        <p class="font-size-14px m-bottom-10px m-top-10px text-align-justify ">
-                            <b>Donner du relief et de la voix à l'événementiel.</b>
-                            <br>
-                            Pour la première édition du Salon BtoB des Vins de Provence, j’ai conçu
-                            et orchestré une stratégie de communication globale de A à Z. De la création de supports
-                            de comm', du street marketing ciblé aux campagnes de mailing, en passant par le
-                            community management et les relations presse
-                            (magazines et web), mon objectif a été de bâtir une visibilité maximale.
-                            <br>
-                            <br>
-                            Résultat : une synergie multicanale réussie qui a permis de fédérer 180 exposants et
-                            d'attirer 900
-                            visiteurs qualifiés, validée par une analyse rigoureuse des performances
-                            post-événement.</p>
+                    <h5 class="c-salmonfa8578 uppercase font-size-18px m-0">Contexte</h5>
+                    <div class="flex flex-direction-column m-bottom-20px">
+                        <p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Première édition du salon BtoB des Vins de Provence (Marseille, 2023) : faire connaître l'événement auprès des professionnels et leur donner envie de venir.</p>
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-0 m-top-10px">Mon rôle</h5>
+<p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Concevoir et piloter la communication de A à Z : supports visuels, street marketing ciblé, campagnes de mailing, community management et relations presse (magazines et web).</p>
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-0 m-top-10px">Démarche</h5>
+<p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Une identité visuelle déclinée de façon cohérente sur chaque point de contact du parcours du visiteur : invitation, flyer, réseaux sociaux, signature mail, programme et publications.</p>
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-0 m-top-10px">Résultat</h5>
+<p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">180 exposants fédérés et 900 visiteurs qualifiés, avec une analyse des performances après l'événement.</p>
+
 
                     </div>
                     <h5 class="c-salmonfa8578 uppercase font-size-18px m-bottom-20px">Exemples de quelques créations
@@ -475,26 +464,26 @@
                         <div class="flex flex-direction-column gap-5px">
                             <span class="key_info_projet">Flyer publicitaire</span>
                             <div class="flex gap-5px">
-                                <img src="img/CIVP/230105_Flyer VPE_page-0001.jpg" height="437" width="315"/>
-                                <img src="img/CIVP/230105_Flyer VPE_page-0002.jpg" height="437" width="315"/>
+                                <img src="img/CIVP/230105_Flyer VPE_page-0001.jpg" height="437" width="315" alt="Flyer Vins de Provence Expériences, recto" loading="lazy"/>
+                                <img src="img/CIVP/230105_Flyer VPE_page-0002.jpg" height="437" width="315" alt="Flyer Vins de Provence Expériences, verso" loading="lazy"/>
                             </div>
                             <span class="key_info_projet m-top-20px">Carton d'invitation</span>
                             <img src="img/CIVP/Invitation  Vins de Provence Expériences_page-0001.jpg" height="437"
-                                 width="630"/></div>
+                                 width="630" alt="Carton d'invitation Vins de Provence Expériences" loading="lazy"/></div>
                         <div class="div-rs flex flex-direction-column gap-5px">
                             <span class="key_info_projet">Visuels réseaux sociaux</span>
                             <div class="div-res-img flex flex-direction-column">
-                                <img src="img/CIVP/2.png" height="280" width="280"/>
-                                <img class="m-top-20px" src="img/CIVP/7.png" height="280" width="280"/>
+                                <img src="img/CIVP/2.jpg" height="280" width="280" alt="Visuel réseaux sociaux Vins de Provence Expériences" loading="lazy"/>
+                                <img class="m-top-20px" src="img/CIVP/7.jpg" height="280" width="280" alt="Visuel réseaux sociaux Vins de Provence Expériences" loading="lazy"/>
                                 <img class="m-top-20px" src="img/CIVP/linkedin000_vdp_220927.jpg" height="280"
-                                     width="280"/>
+                                     width="280" alt="Visuel LinkedIn Vins de Provence Expériences" loading="lazy"/>
                             </div>
                         </div>
                     </div>
                     <div class="signatures-mail flex flex-direction-column gap-5px m-top-20px">
                         <span class="key_info_projet align-self-center">Signatures de mail</span>
                         <img class="align-self-center" src="img/CIVP/VDP_mail_600x250_221116 (2).jpg" height="250"
-                             width="600"/>
+                             width="600" alt="Signature de mail Vins de Provence Expériences" loading="lazy"/>
                     </div>
                 </div>
             </div>
@@ -502,15 +491,16 @@
 
         <!-------------- ASIDE DIV 4 VVC ------------->
         <aside class="aside-4 c-white w-60 m-left-auto m-right-20px">
-            <button class="aside-close-4">✕</button>
+            <button class="aside-close-4" aria-label="Fermer le détail du projet">✕</button>
 
             <div class="aside-header">
-                <h4 class="uppercase m-0 font-size-22px">Création d'une brochure pour un dossier de partenariat</h4>
+                <h4 class="uppercase m-0 font-size-22px">Hiérarchie et lisibilité d'une brochure</h4>
                 <p class="font-size-14px m-bottom-10px m-top-10px text-align-justify ">
-                    Evénement sportif - Var Verdon Challenge
+                    Événement sportif - Var Verdon Challenge
                 </p>
 
                 <div class="tags flex gap-10px m-top-10px">
+                    <span class="key_info_projet">Mise en page</span>
                     <span class="key_info_projet">Canva</span>
                     <span class="key_info_projet">Photoshop</span>
                 </div>
@@ -520,32 +510,31 @@
 
             <div class="aside-left flex flex-direction-column flex-1">
                 <div>
-                    <h5 class="c-salmonfa8578 uppercase font-size-18px m-0">À propos du projet</h5>
-                    <div class="flex">
-                        <p class="font-size-14px m-bottom-10px m-top-10px text-align-justify ">Pour l’événement
-                            sportif Var Verdon
-                            Challenge, j'ai travaillé sur la création de la brochure officielle. En alliant
-                            l'efficacité de Canva pour la mise en page globale et la puissance de Photoshop pour les
-                            retouches photo et le traitement des visuels, j'ai créé un support à la fois dynamique,
-                            lisible et immersif. L'objectif : donner envie aux participants de s'inscrire tout en
-                            valorisant les partenaires et les paysages exceptionnels du Verdon.</p>
+                    <h5 class="c-salmonfa8578 uppercase font-size-18px m-0">Contexte</h5>
+                    <div class="flex flex-direction-column">
+                        <p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Brochure officielle de l'événement sportif Var Verdon Challenge, destinée à la fois aux participants et aux partenaires.</p>
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-0 m-top-10px">Démarche</h5>
+<p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Une mise en page qui guide la lecture : hiérarchie des titres, respiration, visuels forts. Canva pour la structure globale, Photoshop pour retoucher et traiter les photos.</p>
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-0 m-top-10px">Objectif</h5>
+<p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Donner envie de s'inscrire tout en valorisant les partenaires et les paysages du Verdon, avec un support dynamique, lisible et immersif.</p>
+
                     </div>
                 </div>
             </div>
 
             <div class="flex gap-20px justify-content-center m-top-20px">
-                <img class="vvc-img" src="img/Var Verdon Challenge/var_verdon_challenge (1).jpg" height="438" width="310"/>
-                <img class="vvc-img" src="img/Var Verdon Challenge/var_verdon_challenge (2).jpg" height="438" width="310"/>
+                <img class="vvc-img" src="img/Var Verdon Challenge/var_verdon_challenge (1).jpg" height="438" width="310" alt="Brochure Var Verdon Challenge, extrait 1" loading="lazy"/>
+                <img class="vvc-img" src="img/Var Verdon Challenge/var_verdon_challenge (2).jpg" height="438" width="310" alt="Brochure Var Verdon Challenge, extrait 2" loading="lazy"/>
             </div>
         </aside>
 
 
         <!-------------- ASIDE DIV 5 GD ------------->
         <aside class="aside-5 c-white w-60 m-left-auto m-right-20px">
-            <button class="aside-close-5">✕</button>
+            <button class="aside-close-5" aria-label="Fermer le détail du projet">✕</button>
 
             <div class="aside-header">
-                <h4 class="uppercase m-0 font-size-22px">Création de contenus en Grande Distribution</h4>
+                <h4 class="uppercase m-0 font-size-22px">Design de communication en grande distribution</h4>
                 <p class="m-0 c-white">
                     Affiches, catalogues, réseaux sociaux, montage vidéo etc.
                 </p>
@@ -563,14 +552,16 @@
 
             <div class="aside-left flex flex-direction-column flex-1">
                 <div>
-                    <h5 class="c-salmonfa8578 uppercase font-size-18px m-0">À propos des projets</h5>
-                    <div class="flex">
-                        <p class="font-size-14px m-bottom-20px m-top-10px text-align-justify">
-                            Une communication visuelle pensée pour le terrain et le digital. Découvrez un aperçu de
-                            mes réalisations : supports print, contenus pour les médias sociaux, vidéos et outils
-                            d'aide à la formation. À travers chaque projet, je m'efforce d'allier créativité,
-                            respect des chartes graphiques et efficacité visuelle pour répondre aux besoins des
-                            équipes et du public.</p>
+                    <h5 class="c-salmonfa8578 uppercase font-size-18px m-0">Contexte</h5>
+                    <div class="flex flex-direction-column">
+                        <p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Communication print et digitale d'un magasin E.Leclerc : affiches, catalogues, flyers, panneaux, réseaux sociaux, vidéos et outils d'aide à la formation des équipes.</p>
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-0 m-top-10px">Contraintes</h5>
+<p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Chartes graphiques à respecter strictement, formats très variés, délais courts, et un message à comprendre en quelques secondes.</p>
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-0 m-top-10px">Démarche</h5>
+<p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Hiérarchiser l'information (offre, prix, appel à l'action), adapter chaque visuel à son support et à son lieu de lecture, garder une cohérence d'ensemble dans la durée.</p>
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-0 m-top-10px">Ce que j'en retiens</h5>
+<p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Concevoir pour le terrain : un visuel efficace est un visuel compris vite, par les équipes comme par les clients.</p>
+
                     </div>
                 </div>
             </div>
@@ -580,27 +571,27 @@
                 <div>
                     <span class="key_info_projet m-top-10px">Divers affichages</span>
                     <div class="flex gap-10px m-top-20px scroll-x">
-                        <img src="img/E.Leclerc/affiches%20promo.png"
-                             height="320" width="240"/>
-                        <img src="img/E.Leclerc/Flyer%20Drive%20Adrexo%20shopopop%20(2).png"
-                             height="320" width="240"/>
-                        <img src="img/E.Leclerc/Flyer%20Drive%20Adrexo%20shopopop%20(3).png"
-                             height="320" width="240"/>
-                        <img src="img/E.Leclerc/Offre d'emploi boulanger.jpg" height="320" width="240"/>
-                        <img src="img/E.Leclerc/Affiches%20(1).png" height="320" width="240"/>
-                        <img src="img/E.Leclerc/Six-Fours%20Mag%20-%20Leclerc%20La%20Seyne%20-%20Decembre%20-%20Janvier%202021.png"
-                             height="320" width="240"/>
-                        <img src="img/E.Leclerc/Flyer drive 16x32.png" height="320" width="180"/></div>
+                        <img src="img/E.Leclerc/affiches%20promo.jpg"
+                             height="320" width="240" alt="Création graphique pour E.Leclerc" loading="lazy"/>
+                        <img src="img/E.Leclerc/Flyer%20Drive%20Adrexo%20shopopop%20(2).jpg"
+                             height="320" width="240" alt="Création graphique pour E.Leclerc" loading="lazy"/>
+                        <img src="img/E.Leclerc/Flyer%20Drive%20Adrexo%20shopopop%20(3).jpg"
+                             height="320" width="240" alt="Création graphique pour E.Leclerc" loading="lazy"/>
+                        <img src="img/E.Leclerc/Offre d'emploi boulanger.jpg" height="320" width="240" alt="Création graphique pour E.Leclerc" loading="lazy"/>
+                        <img src="img/E.Leclerc/Affiches%20(1).jpg" height="320" width="240" alt="Création graphique pour E.Leclerc" loading="lazy"/>
+                        <img src="img/E.Leclerc/Six-Fours%20Mag%20-%20Leclerc%20La%20Seyne%20-%20Decembre%20-%20Janvier%202021.jpg"
+                             height="320" width="240" alt="Création graphique pour E.Leclerc" loading="lazy"/>
+                        <img src="img/E.Leclerc/Flyer drive 16x32.jpg" height="320" width="180" alt="Création graphique pour E.Leclerc" loading="lazy"/></div>
                 </div>
 
                 <div class="flex flex-direction-column gap-40px">
                     <div>
                         <span class="key_info_projet m-top-20px">Panneaux publicitaires</span>
                         <div class="flex gap-10px m-top-20px scroll-x">
-                            <img src="img/E.Leclerc/panneaux leclerc.png" height="200" width="400"/>
-                            <img src="img/E.Leclerc/Drive de la Ciotat.png" height="230" width="300"/>
-                            <img src="img/E.Leclerc/Flyer%20Drive%20Adrexo%20shopopop%20(5).png" height="230"
-                                 width="330"/>
+                            <img src="img/E.Leclerc/panneaux leclerc.jpg" height="200" width="400" alt="Création graphique pour E.Leclerc" loading="lazy"/>
+                            <img src="img/E.Leclerc/Drive de la Ciotat.jpg" height="230" width="300" alt="Création graphique pour E.Leclerc" loading="lazy"/>
+                            <img src="img/E.Leclerc/Flyer%20Drive%20Adrexo%20shopopop%20(5).jpg" height="230"
+                                 width="330" alt="Création graphique pour E.Leclerc" loading="lazy"/>
 
                         </div>
                     </div>
@@ -608,27 +599,27 @@
                     <div>
                         <span class="key_info_projet">Catalogues promotionnels</span>
                         <div class="flex gap-20px m-top-20px scroll-x">
-                            <img src="img/E.Leclerc/Cata plein air 1.jpg" height="400" width="283"/>
-                            <img src="img/E.Leclerc/Cata plein air 2.jpg" height="400" width="283"/>
-                            <img src="img/E.Leclerc/Page 1.png" height="400" width="283"/>
-                            <img src="img/E.Leclerc/Page 2.png" height="400" width="283"/>
+                            <img src="img/E.Leclerc/Cata plein air 1.jpg" height="400" width="283" alt="Création graphique pour E.Leclerc" loading="lazy"/>
+                            <img src="img/E.Leclerc/Cata plein air 2.jpg" height="400" width="283" alt="Création graphique pour E.Leclerc" loading="lazy"/>
+                            <img src="img/E.Leclerc/Page 1.jpg" height="400" width="283" alt="Création graphique pour E.Leclerc" loading="lazy"/>
+                            <img src="img/E.Leclerc/Page 2.jpg" height="400" width="283" alt="Création graphique pour E.Leclerc" loading="lazy"/>
                         </div>
                     </div>
 
                     <div>
                         <span class="key_info_projet">Flyer publicitaire Foire aux Vins</span>
-                        <div class="flex gap-10px m-top-20px">
-                            <img src="img/E.Leclerc/fav 2021 (1).png" height="309" width="400"/>
-                            <img src="img/E.Leclerc/fav 2021 (2).png" height="309" width="400"/>
+                        <div class="flex gap-10px m-top-20px scroll-x">
+                            <img src="img/E.Leclerc/fav 2021 (1).jpg" height="309" width="400" alt="Création graphique pour E.Leclerc" loading="lazy"/>
+                            <img src="img/E.Leclerc/fav 2021 (2).jpg" height="309" width="400" alt="Création graphique pour E.Leclerc" loading="lazy"/>
                         </div>
                     </div>
 
                     <div>
                         <span class="key_info_projet ">Calendrier de l'Avent</span>
                         <div class="flex gap-10px m-top-20px scroll-x">
-                            <img src="img/E.Leclerc/Calendrier Noël (1).png" height="309" width="400"/>
-                            <img src="img/E.Leclerc/Calendrier Noël (2).png" height="309" width="400"/>
-                            <img src="img/E.Leclerc/Calendrier Noël (4).png" height="309" width="400"/>
+                            <img src="img/E.Leclerc/Calendrier Noël (1).jpg" height="309" width="400" alt="Création graphique pour E.Leclerc" loading="lazy"/>
+                            <img src="img/E.Leclerc/Calendrier Noël (2).jpg" height="309" width="400" alt="Création graphique pour E.Leclerc" loading="lazy"/>
+                            <img src="img/E.Leclerc/Calendrier Noël (4).jpg" height="309" width="400" alt="Création graphique pour E.Leclerc" loading="lazy"/>
                         </div>
                     </div>
                 </div>
@@ -636,22 +627,22 @@
         </aside>
 
 
-        <!-------------- ASIDE DIV 6 ??? ------------->
-        <aside class="aside-6 c-white w-60 m-right-auto m-right-20px">
-
-            <button class="aside-close-6">✕</button>
+        <!-------------- ASIDE DIV 6 LE TEMPS D'UNE TASSE ------------->
+        <aside class="aside-6 c-white w-60 m-left-auto m-right-20px">
+            <button class="aside-close-6" aria-label="Fermer le détail du projet">✕</button>
 
             <div class="aside-header">
-                <h4 class="uppercase m-0 font-size-22px">Reproduction d'un site en HTML/CSS/JS</h4>
-                <a class="m-0 c-white text-decoration-none cursor-pointer"
-                   href="https://www.hobbitontours.com/">Hobbiton™
-                    Movie Set Tours (official version)</a>
+                <h4 class="uppercase m-0 font-size-22px">Site e-commerce : Le temps d'une tasse</h4>
+                <p class="m-0 c-white">Brûlerie artisanale de café, thé et infusions (projet fictif)</p>
+                <span class="badge-wip">Projet en cours de développement</span>
 
                 <div class="tags flex gap-10px m-top-10px">
-                    <span class="key_info_projet">HTML</span>
-                    <span class="key_info_projet">CSS</span>
-                    <span class="key_info_projet">JavaScript</span>
-                    <span class="key_info_projet">Local Storage</span>
+                    <span class="key_info_projet">UX/UI</span>
+                    <span class="key_info_projet">Figma</span>
+                    <span class="key_info_projet">React</span>
+                    <span class="key_info_projet">Node.js / Express</span>
+                    <span class="key_info_projet">MySQL</span>
+                    <span class="key_info_projet">Docker</span>
                     <span class="key_info_projet">Responsive</span>
                 </div>
             </div>
@@ -660,76 +651,121 @@
 
             <div class="aside-left flex flex-direction-column flex-1">
                 <div>
-                    <h5 class="c-salmonfa8578 uppercase font-size-18px m-0">À propos du projet</h5>
-                    <div class="flex">
-                        <p class="font-size-14px m-bottom-10px m-top-10px ">Projet école de création d'un
-                            tableau Kanban dans le cadre d'une mise en pratique JavaScript.</p>
-                        <button class="button-voir-site m-bottom-20px">Voir le projet ➜</button>
+                    <div class="flex flex-direction-column align-items-start">
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-0 m-top-10px">Contexte</h5>
+<p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Projet de fin de formation (titre DWWM), réalisé en 4 mois : une brûlerie artisanale fictive, installée en Provence, qui veut vendre en ligne. Ses clients sont des particuliers qui aiment le café et le thé et veulent savoir d'où vient ce qu'ils boivent.</p>
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-0 m-top-10px">Le besoin utilisateur</h5>
+<p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">J'ai écrit 43 user stories par profil (visiteur, client, administrateur), avec des priorités et des critères d'acceptation, puis une arborescence simple : accueil, pages produits, à propos.</p>
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-0 m-top-10px">Démarche UX/UI</h5>
+<p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Wireframes sur Figma en niveaux de gris, d'abord en version mobile puis desktop, puis maquettes (charte, logo, composants réutilisables) et prototype cliquable. Je l'ai fait tester à quelques personnes pour repérer les étapes où elles hésitaient ou se perdaient, puis j'ai ajusté les écrans.</p>
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-0 m-top-10px">Choix d'interface</h5>
+<p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Le panier est un panneau latéral : l'ajout est confirmé sans quitter la fiche produit. La connexion est une modale, et l'article d'un visiteur non connecté est gardé en mémoire. Les filtres sont cumulables et la sous-catégorie vit dans l'URL : le lien est partageable et le bouton « retour » fonctionne. Des cartes « squelettes » remplacent l'écran vide pendant le chargement.</p>
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-0 m-top-10px">Identité et accessibilité</h5>
+<p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Une idée directrice : le café est une pause, une parenthèse dans la journée. Le logo associe une tasse et une horloge. Peu de texte par écran, des couleurs chaudes, des animations discrètes. Texte brun sur crème avec un contraste d'au moins 4,5:1, boutons assez grands pour le doigt, focus clavier visible.</p>
+
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-0 m-top-10px">Côté développement</h5>
+<p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Front-end en React (filtres, modales, panier, appels API), API Node.js / Express en architecture MVC, base MySQL, authentification par jeton JWT dans un cookie HttpOnly, rôles et routes protégées, déploiement avec Docker et Nginx.</p>
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-0 m-top-10px">État du projet</h5>
+<p class="font-size-14px m-bottom-10px m-top-10px text-align-justify">Le site est encore en cours de développement. Le catalogue, les comptes clients, le panier et l'administration sont en place ; le paiement en ligne est pour l'instant fictif. Prochaines étapes : paiement réel via un prestataire certifié, suivi des commandes côté administrateur et davantage de tests.</p>
+                        <a href="https://github.com/johanna-stripe/projet_coffee_site" class="button-voir-site text-decoration-none m-top-10px m-bottom-20px">Voir le code sur GitHub ➜</a>
                     </div>
                 </div>
             </div>
 
             <div class="aside-screenshots flex-1">
-                <img src="img/Site_hobbiton/Screenshot1.png" class="screenshot-main" alt="">
-                <div class="flex gap-10px">
-                    <img src="img/Site_hobbiton/Screenshot2.png" class="screenshot-small" alt="">
-                    <img src="img/Site_hobbiton/Screenshot3.png" class="screenshot-small" alt="">
+                <h5 class="c-salmonfa8578 uppercase font-size-18px m-top-20px m-bottom-10px">Du wireframe à la maquette</h5>
+                <p class="font-size-14px m-top-10px m-bottom-10px text-align-justify">Les wireframes en niveaux de gris posent le contenu et la navigation, avant toute couleur. Les maquettes y ajoutent la charte, les composants et les états (sous-menu, panier plein ou vide, connexion). Cliquez sur une image pour l'agrandir.</p>
+                <h5 class="c-salmonfa8578 uppercase font-size-18px m-top-10px m-bottom-10px">Wireframes desktop</h5>
+                
+                <div class="gallery-ui gallery-desktop scroll-x">
+                                        <figure><a href="img/Le_temps_d_une_tasse/wireframe-desktop-01-accueil.jpg" target="_blank" rel="noopener"><img src="img/Le_temps_d_une_tasse/wireframe-desktop-01-accueil.jpg" alt="Wireframe desktop de la page d'accueil" loading="lazy"></a><figcaption>Accueil</figcaption></figure>
+                    <figure><a href="img/Le_temps_d_une_tasse/wireframe-desktop-02-categorie.jpg" target="_blank" rel="noopener"><img src="img/Le_temps_d_une_tasse/wireframe-desktop-02-categorie.jpg" alt="Wireframe desktop de la page catégorie" loading="lazy"></a><figcaption>Catégorie</figcaption></figure>
+                    <figure><a href="img/Le_temps_d_une_tasse/wireframe-desktop-03-fiche-produit.jpg" target="_blank" rel="noopener"><img src="img/Le_temps_d_une_tasse/wireframe-desktop-03-fiche-produit.jpg" alt="Wireframe desktop de la fiche produit" loading="lazy"></a><figcaption>Fiche produit</figcaption></figure>
                 </div>
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-top-20px m-bottom-10px">Wireframes mobile</h5>
+                
+                <div class="gallery-ui gallery-mobile scroll-x">
+                                        <figure><a href="img/Le_temps_d_une_tasse/wireframe-mobile-01-accueil-partie-1.jpg" target="_blank" rel="noopener"><img src="img/Le_temps_d_une_tasse/wireframe-mobile-01-accueil-partie-1.jpg" alt="Wireframe mobile de la page d'accueil" loading="lazy"></a><figcaption>Accueil</figcaption></figure>
+                    <figure><a href="img/Le_temps_d_une_tasse/wireframe-mobile-03-categorie-partie-1.jpg" target="_blank" rel="noopener"><img src="img/Le_temps_d_une_tasse/wireframe-mobile-03-categorie-partie-1.jpg" alt="Wireframe mobile de la page catégorie" loading="lazy"></a><figcaption>Catégorie</figcaption></figure>
+                    <figure><a href="img/Le_temps_d_une_tasse/wireframe-mobile-04-fiche-produit.jpg" target="_blank" rel="noopener"><img src="img/Le_temps_d_une_tasse/wireframe-mobile-04-fiche-produit.jpg" alt="Wireframe mobile de la fiche produit" loading="lazy"></a><figcaption>Fiche produit</figcaption></figure>
+                </div>
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-top-20px m-bottom-10px">Maquettes desktop</h5>
+                
+                <div class="gallery-ui gallery-desktop scroll-x">
+                    <figure><a href="img/Le_temps_d_une_tasse/maquette-desktop-01-accueil.jpg" target="_blank" rel="noopener"><img src="img/Le_temps_d_une_tasse/maquette-desktop-01-accueil.jpg" alt="Maquette desktop de la page d'accueil" loading="lazy"></a><figcaption>Accueil</figcaption></figure>
+                    <figure><a href="img/Le_temps_d_une_tasse/maquette-desktop-02-categorie.jpg" target="_blank" rel="noopener"><img src="img/Le_temps_d_une_tasse/maquette-desktop-02-categorie.jpg" alt="Maquette desktop de la page catégorie avec sous-menu" loading="lazy"></a><figcaption>Catégorie et sous-menu</figcaption></figure>
+                    <figure><a href="img/Le_temps_d_une_tasse/maquette-desktop-03-fiche-produit.jpg" target="_blank" rel="noopener"><img src="img/Le_temps_d_une_tasse/maquette-desktop-03-fiche-produit.jpg" alt="Maquette desktop de la fiche produit" loading="lazy"></a><figcaption>Fiche produit</figcaption></figure>
+                    <figure><a href="img/Le_temps_d_une_tasse/maquette-desktop-04-panier.jpg" target="_blank" rel="noopener"><img src="img/Le_temps_d_une_tasse/maquette-desktop-04-panier.jpg" alt="Maquette desktop du panier latéral" loading="lazy"></a><figcaption>Panier</figcaption></figure>
+                    <figure><a href="img/Le_temps_d_une_tasse/maquette-desktop-05-connexion.jpg" target="_blank" rel="noopener"><img src="img/Le_temps_d_une_tasse/maquette-desktop-05-connexion.jpg" alt="Maquette desktop de la modale de connexion" loading="lazy"></a><figcaption>Connexion</figcaption></figure>
+                    <figure><a href="img/Le_temps_d_une_tasse/maquette-desktop-06-espace-client.jpg" target="_blank" rel="noopener"><img src="img/Le_temps_d_une_tasse/maquette-desktop-06-espace-client.jpg" alt="Maquette desktop de l'espace client" loading="lazy"></a><figcaption>Espace client</figcaption></figure>
+                </div>
+<h5 class="c-salmonfa8578 uppercase font-size-18px m-top-20px m-bottom-10px">Maquettes mobile</h5>
+                
+                <div class="gallery-ui gallery-mobile scroll-x">
+                    <figure><a href="img/Le_temps_d_une_tasse/maquette-mobile-02-menu-burger.png" target="_blank" rel="noopener"><img src="img/Le_temps_d_une_tasse/maquette-mobile-02-menu-burger.png" alt="Maquette mobile de la page d'accueil" loading="lazy"></a><figcaption>Accueil</figcaption></figure>
+                    <figure><a href="img/Le_temps_d_une_tasse/maquette-mobile-03-categorie-partie-1.jpg" target="_blank" rel="noopener"><img src="img/Le_temps_d_une_tasse/maquette-mobile-03-categorie-partie-1.jpg" alt="Maquette mobile de la page catégorie" loading="lazy"></a><figcaption>Catégorie</figcaption></figure>
+                    <figure><a href="img/Le_temps_d_une_tasse/maquette-mobile-04-fiche-produit.jpg" target="_blank" rel="noopener"><img src="img/Le_temps_d_une_tasse/maquette-mobile-04-fiche-produit.jpg" alt="Maquette mobile de la fiche produit" loading="lazy"></a><figcaption>Fiche produit</figcaption></figure>
+                    <figure><a href="img/Le_temps_d_une_tasse/maquette-mobile-05-panier.jpg" target="_blank" rel="noopener"><img src="img/Le_temps_d_une_tasse/maquette-mobile-05-panier.jpg" alt="Maquette mobile du panier" loading="lazy"></a><figcaption>Panier</figcaption></figure>
+                    <figure><a href="img/Le_temps_d_une_tasse/maquette-mobile-07-connexion.jpg" target="_blank" rel="noopener"><img src="img/Le_temps_d_une_tasse/maquette-mobile-07-connexion.jpg" alt="Maquette mobile de la connexion" loading="lazy"></a><figcaption>Connexion</figcaption></figure>
+                </div>
+                <h5 class="c-salmonfa8578 uppercase font-size-18px m-top-10px m-bottom-10px">Modélisation de la base de données</h5>
+                <img src="img/Le_temps_d_une_tasse/mld.png" class="screenshot-main" alt="Modèle logique de données : produits, catégories, marques, clients, paniers et commandes" loading="lazy">
             </div>
         </aside>
     </div>
-
 </section>
 
 
 <!--****************CONTACT*********************-->
-<section class="section-contact m-0 c-white">
+<section id="contact" class="section-contact m-0 c-white">
     <h2 class="font-size-50px text-align-center uppercase p-top-50px m-bottom-auto">Contact</h2>
-    <div class="deco1 c-salmon font-size-30px text-align-center m-bottom-40px">————— ◇ —————</div>
+    <div class="deco1 c-salmon font-size-30px text-align-center m-bottom-40px" aria-hidden="true">————— ◇ —————</div>
 
     <div class="div-contact flex flex-direction-row justify-content-center gap-50px">
-        <div class="phone flex flex-direction-column align-items-center justify-content-center w-300px h-200px cursor-pointer">
-            <img class="m-bottom-20px" src="img/icons/device-mobile-camera.svg" height="50px" width="50px" alt="phone number">
+        <div class="phone contact-card flex flex-direction-column align-items-center justify-content-center">
+            <img class="m-bottom-20px" src="img/icons/device-mobile-camera.svg" height="50px" width="50px" alt="">
             <p class="font-size-18px font-bold m-0">Téléphone</p>
-            <p class="font-size-18px numero-telephone text-align-center">+33(6) 34 701 767</p>
+            <p class="font-size-18px numero-telephone text-align-center"><a href="tel:+33634701767">+33 (6) 34 70 17 67</a></p>
         </div>
 
-        <div class="e-mail flex flex-direction-column align-items-center justify-content-center w-300px h-200px cursor-pointer">
-            <img class="icon-contact-salmon m-bottom-20px" src="img/icons/envelope-open.svg" height="50px" width="50px" alt="mail">
+        <div class="e-mail contact-card flex flex-direction-column align-items-center justify-content-center">
+            <img class="icon-contact-salmon m-bottom-20px" src="img/icons/envelope-open.svg" height="50px" width="50px" alt="">
             <div class="text-align-center">
                 <p class="font-size-18px font-bold m-0">E-mail</p>
-                <p><a class="font-size-18px c-white text-align-center" href="mailto:stripe.johanna@gmail.com">stripe.johanna@gmail.com</a></p>
+                <p><a class="c-white text-align-center" href="mailto:stripe.johanna@gmail.com">stripe.johanna@gmail.com</a></p>
             </div>
         </div>
 
-        <div class="linkedin flex flex-direction-column align-items-center justify-content-center w-300px h-200px cursor-pointer">
-            <img class="m-bottom-20px" src="img/icons/linkedin-logo-white.svg" height="50px" width="50px" alt="linkedin">
+        <div class="linkedin contact-card flex flex-direction-column align-items-center justify-content-center">
+            <img class="m-bottom-20px" src="img/icons/linkedin-logo-white.svg" height="50px" width="50px" alt="">
             <p class="font-size-18px font-bold m-0">LinkedIn</p>
             <p><a class="font-size-18px text-decoration-none c-white text-align-center" href="https://www.linkedin.com/in/johanna-stripe/">Johanna
                 STRIPE</a></p>
         </div>
 
-        <div class="adresse flex flex-direction-column align-items-center justify-content-center w-300px h-200px cursor-pointer">
-            <img class="m-bottom-20px" src="img/icons/map-pin.svg" height="50px" width="50px" alt="map">
+        <div class="adresse contact-card flex flex-direction-column align-items-center justify-content-center">
+            <img class="m-bottom-20px" src="img/icons/map-pin.svg" height="50px" width="50px" alt="">
             <p class="font-size-18px font-bold m-0">Secteur</p>
             <p class="font-size-18px text-align-center">Toulon et environs, France</p>
         </div>
     </div>
 
-
 </section>
-</body>
 
 <footer>
-    <div class="deco-footer">————— ◇ —————</div>
+    <div class="deco-footer" aria-hidden="true">————— ◇ —————</div>
     <p>Copyrights © 2026. Johanna Stripe</p>
     <div class="footer-links">
         <a href="mentionsLegales.html">Mentions légales</a>
-        |
+        <span aria-hidden="true">|</span>
+        <a href="https://github.com/johanna-stripe" target="_blank" rel="noopener">GitHub</a>
+        <span aria-hidden="true">|</span>
+        <a href="https://www.linkedin.com/in/johanna-stripe/" target="_blank" rel="noopener">LinkedIn</a>
+        <span aria-hidden="true">|</span>
         <a href="mailto:stripe.johanna@gmail.com">Me contacter</a>
     </div>
 </footer>
 
-
-</html>
 <script src="js/script.js" defer></script>
+</body>
+</html>
