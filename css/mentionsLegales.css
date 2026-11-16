@@ -1,29 +1,26 @@
-/* ==================PAGE : MENTIONS LEGALES=======================*/
 /* ===============================================================*/
-body{
-    padding-top: 20px;
-}
-
-.logo-and-name {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo-and-name img {
-    display: block;
-    vertical-align: middle;
-}
-
-.logo-and-name .name {
-    margin: 0;
-    line-height: 1;
-}
-
+/* ==================PAGE : MENTIONS LEGALES======================*/
+/* ===============================================================*/
 .section-mentions-legales {
+    flex-direction: column;
     max-width: 900px;
     margin: 0 auto;
-    padding: 60px 20px 120px;
+    padding: clamp(32px, 6vw, 60px) var(--gutter) clamp(60px, 10vw, 120px);
+}
+
+.section-mentions-legales h1 {
+    margin: 0 auto 10px;
+    text-align: center;
+    color: white;
+    font-size: clamp(26px, 5vw, 40px);
+}
+
+.deco1 {
+    display: block;
+    margin: 0 auto clamp(24px, 4vw, 40px);
+    text-align: center;
+    font-size: clamp(18px, 3vw, 24px);
+    letter-spacing: -2px;
 }
 
 .mentions-legales-content {
@@ -31,31 +28,11 @@ body{
     margin: 0 auto;
 }
 
-.section-mentions-legales h1, .name{
-    color: white;
-}
-
-.section-mentions-legales h1 {
-    margin: 0 auto 10px;
-    display: block;
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.deco1 {
-    display: block;
-    margin: 0 auto 40px;
-    text-align: center;
-    color:white;
-}
-
 .mentions-legales-content h2 {
     color: #fa8578;
     text-transform: uppercase;
-    font-size: 20px;
-    margin-top: 40px;
-    margin-bottom: 10px;
+    font-size: clamp(16px, 2.2vw, 20px);
+    margin: clamp(28px, 4vw, 40px) 0 10px;
 }
 
 .mentions-legales-content h2:first-of-type {
@@ -63,11 +40,11 @@ body{
 }
 
 .mentions-legales-content p {
-    font-size: 15px;
+    font-size: clamp(15px, 1.7vw, 16px);
     line-height: 1.7;
-    text-align: justify;
     margin: 0;
     color: white;
+    overflow-wrap: anywhere;
 }
 
 .mentions-legales-content a {
@@ -87,9 +64,7 @@ body{
     display: inline-block;
     margin-top: 50px;
     border: 0.5px solid #fa8578;
-    color: #fa8578;
-    padding: 10px 20px;
-    text-decoration: none;
+    padding: 12px 22px;
     text-transform: uppercase;
     font-size: 13px;
     font-weight: bold;
@@ -97,32 +72,9 @@ body{
     transition: background 0.3s, color 0.3s, transform 0.3s;
 }
 
-.retour-accueil:hover {
+.mentions-legales-content a.retour-accueil:hover {
     background: #fa8578;
     color: white;
+    text-decoration: none;
     transform: scale(1.05);
 }
-
-@media (max-width: 992px) {
-    .section-mentions-legales {
-        padding: 50px 20px 100px;
-    }
-
-    .mentions-legales-content h2 {
-        font-size: 26px;
-        margin-top: 50px;
-    }
-
-    .mentions-legales-content p {
-        font-size: 22px;
-        line-height: 1.6;
-    }
-
-    .retour-accueil {
-        font-size: 20px;
-        padding: 16px 28px;
-    }
-}
-
-
-

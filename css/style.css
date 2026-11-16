@@ -1,33 +1,76 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* ===============================================================*/
+/* ===================== BASE / RESET ============================*/
+/* ===============================================================*/
+:root {
+    --nav-h: 90px;
+    --gutter: clamp(16px, 4vw, 40px);
+    --salmon: #fa8578;
+    --bg: #0f172a;
+    --text-soft: rgba(255, 255, 255, 0.78);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
 html {
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    scroll-timeline-name: --page-scroll;
-    scroll-timeline-axis: block;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
     margin: 0;
-    padding: 0;
-    padding-top: 100px;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif, SansSerif;
-    background: #0f172a;
-    height: fit-content;
+    padding: var(--nav-h) 0 0;
+    font-family: "Roboto", "Segoe UI", Arial, sans-serif;
+    color: #fff;
+    background: var(--bg);
+    min-height: 100vh;
     overflow-x: clip;
     max-width: 100%;
     position: relative;
     z-index: 0;
+    line-height: 1.5;
 }
 
-body::before {
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+    overflow-wrap: break-word;
+    line-height: 1.2;
+}
+
+a {
+    color: inherit;
+}
+
+:target {
+    scroll-margin-top: var(--nav-h);
+}
+
+a:focus-visible,
+button:focus-visible,
+.menu-list li:focus-visible {
+    outline: 2px solid var(--salmon);
+    outline-offset: 3px;
+}
+
+/* Taches de couleur d'arrière-plan */
+body::before,
+body::after {
     content: "";
     position: fixed;
     width: 300px;
     height: 300px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+body::before {
     background: #fa7676;
     filter: blur(140px);
     top: 33%;
@@ -35,29 +78,37 @@ body::before {
 }
 
 body::after {
-    content: "";
-    position: fixed;
-    width: 300px;
-    height: 300px;
     background: #4ecdc4;
     filter: blur(120px);
     bottom: 10%;
     right: 15%;
 }
 
-body::before,
-body::after {
-    z-index: -1;
-}
-
-
-@media (max-width: 767px) {
-    h1, h2, h3, h4, h5 {
-        word-break: break-word;
+@media (max-width: 992px) {
+    :root {
+        --nav-h: 72px;
     }
 }
 
+@media (max-width: 600px) {
+    :root {
+        --nav-h: 64px;
+    }
 
+    body::before,
+    body::after {
+        width: 200px;
+        height: 200px;
+    }
+}
 
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 
-
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}

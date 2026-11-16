@@ -1,99 +1,107 @@
-
 /* ===============================================================*/
 /* ======================SECTION 5 : CONTACTS=====================*/
 /* ===============================================================*/
-.phone:hover, .e-mail:hover, .adresse:hover, .linkedin:hover {
-    background-color: rgba(255, 255, 255, 0.08);
+.section-contact {
+    padding: 0 var(--gutter);
 }
 
-.phone p:nth-of-type(2):hover, .e-mail p:nth-of-type(2) a:hover, .linkedin p:nth-of-type(2) a:hover {
+.section-contact > h2 {
+    font-size: clamp(30px, 5.5vw, 50px);
+    padding-top: clamp(40px, 6vw, 60px);
+    margin: 0 0 10px;
+}
+
+.section-contact .deco1 {
+    margin-bottom: clamp(24px, 4vw, 40px);
+}
+
+.div-contact {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.div-contact > div {
+    position: relative;
+    width: auto;
+    height: auto;
+    min-height: 190px;
+    padding: 24px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.div-contact > div:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    transform: translateY(-4px);
+}
+
+.div-contact img {
+    width: 50px;
+    height: 50px;
+}
+
+.div-contact p,
+.div-contact p a {
+    font-size: clamp(15px, 1.5vw, 18px);
+    overflow-wrap: anywhere;
+}
+
+.div-contact p {
+    margin: 0;
+}
+
+.div-contact p + p {
+    margin-top: 6px;
+}
+
+.div-contact a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* toute la carte devient cliquable */
+.contact-card a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+}
+
+.contact-card:has(a) {
+    cursor: pointer;
+}
+
+.div-contact a:hover,
+.div-contact a:focus-visible {
     color: #fa8578;
 }
 
-@media (max-width: 992px) {
-
+@media (max-width: 1000px) {
     .div-contact {
-        flex-direction: column;
-        align-items: center;
-        gap: 5px
-    }
-
-    .div-contact p, .div-contact p a {
-        font-size: 35px !important;
-        margin: 0;
-    }
-
-    .section-contact h2:first-of-type {
-        font-size: 70px;
-    }
-
-
-    .section-contact div img {
-        height: 70px;
-        width: 70px;
-    }
-
-    .phone, .e-mail, .linkedin, .adresse {
-        height: 250px;
-        width: fit-content;
-        margin-top: 30px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
-@media (max-width: 767px) {
-    .section-contact h2.font-size-40px {
-        font-size: 26px;
-    }
-
-    .phone, .e-mail, .linkedin, .adresse {
-        width: 80%;
-        height: 150px;
-    }
-
-    .section-contact {
-        padding: 0 12px;
-    }
-
-    .section-contact h2.font-size-40px {
-        font-size: 22px;
-    }
-}
-
-@media (max-width: 426px) {
-    .section-contact h2:first-of-type  {
-        font-size: 42px !important;
-    }
-
-    .div-contact p, .div-contact p a{
-        font-size: 23px !important;
-    }
-
+@media (max-width: 520px) {
     .div-contact {
-        gap: 20px;
+        grid-template-columns: 1fr;
+        gap: 14px;
     }
 
-    .phone, .e-mail, .linkedin, .adresse {
-        width: 80%;
-        height: 150px;
+    .div-contact > div {
+        min-height: 0;
+        padding: 20px 16px;
     }
 
-    .section-contact {
-        padding: 0 12px;
-    }
-    .div-contact img{
-        height: 45px !important;
-        width: 45px !important;
+    .div-contact img {
+        width: 42px;
+        height: 42px;
+        margin-bottom: 12px !important;
     }
 }
-
-
-@media (max-width: 325px) {
-    .div-contact p, .div-contact p a{
-        font-size: 20px !important;
-    }
-    .div-contact img{
-        height: 45px !important;
-        width: 45px !important;
-    }
-}
-
