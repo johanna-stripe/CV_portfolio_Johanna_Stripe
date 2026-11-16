@@ -5,24 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mentions légales du site de Johanna Stripe.">
     <title>Mentions légales - Johanna STRIPE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/navBar.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/mentionsLegales.css">
     <link rel="icon" href="img/logo_JS.png">
 </head>
 <body>
 
-<nav class="nav flex align-items-center h-50px p-25px position-fixed">
+<nav class="nav nav-scrolled flex align-items-center position-fixed" aria-label="Navigation principale">
     <div class="menu-left flex align-items-center">
-        <div class="logo-and-name flex align-items-center cursor-pointer">
-            <img src="img/logo_JS (1).png" height="75" width="150" alt="logo_JS"/>
-            <h1 class="name c-white font-size-25px">Johanna STRIPE</h1>
-        </div>
+        <a class="logo-and-name flex align-items-center text-decoration-none" href="index.html">
+            <img src="img/logo_JS (1).png" height="75" width="150" alt="Logo Johanna Stripe"/>
+            <span class="name c-white">Johanna STRIPE</span>
+        </a>
     </div>
 </nav>
 
-<section class="section-mentions-legales c-white flex">
+<main class="section-mentions-legales c-white flex">
     <h1 class="text-align-center uppercase font-size-40px m-bottom-10px c-white">Mentions légales</h1>
-    <div class="deco1 c-salmonfa8578 text-align-center m-bottom-40px">————— ◇ —————</div>
+    <div class="deco1 c-salmonfa8578 text-align-center m-bottom-40px" aria-hidden="true">————— ◇ —————</div>
 
     <div class="mentions-legales-content">
 
@@ -85,7 +91,12 @@
 
         <a class="retour-accueil" href="index.html">Retour à l'accueil</a>
     </div>
-</section>
+</main>
+
+<footer>
+    <div class="deco-footer" aria-hidden="true">————— ◇ —————</div>
+    <p>Copyrights © 2026. Johanna Stripe</p>
+</footer>
 
 </body>
 </html>
